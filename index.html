@@ -129,7 +129,7 @@
         </div>
         <a href="#section-propos" class="arrow">&#8593;</a>
       </div>
-      <div class="wrap">
+      <div id="wrap">
         <ul>
           <li><div class="image" style=" background-image: url(https://live.staticflickr.com/65535/53344195381_f371e5117b_h.jpg);"></div>
             <div class="text" id="myText">
@@ -222,13 +222,16 @@
       document.getElementById("closeTrigram").style.display = "block";
       document.getElementById("trigram").style.opacity = "0%";
       document.getElementById("affiche").style.opacity = "0%";
-      document.getElementById("footer").style.display = "block";
+      document.getElementById("foot1").style.opacity = "0%";
+      document.getElementById("foot2").style.display = "block";
+      document.getElementById("wrap").style.filter = "grayscale(100%)";
       setTimeout(function(){
         document.getElementById("menuTrigram").style.opacity = "100%";
         document.getElementById("closeTrigram").style.opacity = "100%";
         document.getElementById("trigram").style.display = "none";
         document.getElementById("affiche").style.display = "none";
-        document.getElementById("footer").style.opacity = "100%";
+        document.getElementById("foot1").style.display = "none";
+        document.getElementById("foot2").style.opacity = "100%";
       }, 200);
     }
     function closeMenu() {
@@ -236,13 +239,16 @@
       document.getElementById("closeTrigram").style.opacity = "0%";
       document.getElementById("trigram").style.display = "block";
       document.getElementById("affiche").style.display = "block";
-      document.getElementById("footer").style.opacity = "0%";
+      document.getElementById("foot1").style.display = "block";
+      document.getElementById("foot2").style.opacity = "0%";
+      document.getElementById("wrap").style.filter = "grayscale(0%)";
       setTimeout(function(){
         document.getElementById("menuTrigram").style.display = "none";
         document.getElementById("closeTrigram").style.display = "none";
         document.getElementById("trigram").style.opacity = "100%";
         document.getElementById("affiche").style.opacity = "100%";
-        document.getElementById("footer").style.display = "none";
+        document.getElementById("foot1").style.opacity = "100%";
+        document.getElementById("foot2").style.display = "none";
       }, 200);
     }
   </script>
