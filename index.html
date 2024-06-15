@@ -4,7 +4,12 @@
     <title>AB - Home</title>
     <meta charset='UTF-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href='https://db.onlinewebfonts.com/c/4c4a87973ef80fc72049e01b9085fadc?family=ABC+Diatype' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="logo2.ico" rel="shortcut icon">
     <link rel="stylesheet" href="index.css">
@@ -12,40 +17,44 @@
   
   <body>
     <header>
-      <div id="menu">
-        <div>
-          <svg id='logo' width="29.63" height="29.63" xmlns="http://www.w3.org/2000/svg">
+      <div id="logo">
+        <svg id='logo1' width="29.63" height="29.63" xmlns="http://www.w3.org/2000/svg">
+          <rect height="28.35" width="28.35" y="0.64" x="0.64" rx="2"/>
+          <polyline points="25.77 24.82 14.82 4.82 3.87 24.82"/>
+          <path d="m24.56999,13.33c-2.44,0 -2.44,-2.35 -4.88,-2.35s-2.44,2.35 -4.89,2.35s-2.44,-2.35 -4.89,-2.35s-2.44,2.35 -4.89,2.35"/>
+          <text id="mytext" x="10.6" y="24.74" font-family="Diatype Variable" font-weight="800" stroke="none" font-size="12.88px">B</text>
+        </svg>
+        <a href="javascript:void(0)" onclick="closeNav()">
+          <svg id='logo2' width="29.63" height="29.63" xmlns="http://www.w3.org/2000/svg">
             <rect height="28.35" width="28.35" y="0.64" x="0.64" rx="2"/>
             <polyline points="25.77 24.82 14.82 4.82 3.87 24.82"/>
             <path d="m24.56999,13.33c-2.44,0 -2.44,-2.35 -4.88,-2.35s-2.44,2.35 -4.89,2.35s-2.44,-2.35 -4.89,-2.35s-2.44,2.35 -4.89,2.35"/>
             <text id="mytext" x="10.6" y="24.74" font-family="Diatype Variable" font-weight="800" stroke="none" font-size="12.88px">B</text>
           </svg>
-          <a href="javascript:void(0)" onclick="closeNav()">
-            <svg id='logo1' width="29.63" height="29.63" xmlns="http://www.w3.org/2000/svg">
-              <rect height="28.35" width="28.35" y="0.64" x="0.64" rx="2"/>
-              <polyline points="25.77 24.82 14.82 4.82 3.87 24.82"/>
-              <path d="m24.56999,13.33c-2.44,0 -2.44,-2.35 -4.88,-2.35s-2.44,2.35 -4.89,2.35s-2.44,-2.35 -4.89,-2.35s-2.44,2.35 -4.89,2.35"/>
-              <text id="mytext" x="10.6" y="24.74" font-family="Diatype Variable" font-weight="800" stroke="none" font-size="12.88px">B</text>
-            </svg>
-          </a>
-          <div class="dropdown" id="mydrop">
-            <a class="dropbtn" style="cursor: pointer;">menu</a>
-            <div class="dropdown-content">
-              <a style="cursor: pointer" class='title' onclick="openNav()">à propos</a>
-              <a href='Projets.html' class='title'>projets</a>
-            </div>
+        </a>
+      </div>
+      <div id="menu">
+        <div class="dropdown" id="mydrop">
+          <a class="dropbtn" style="cursor: pointer;">menu</a>
+          <div class="dropdown-content">
+            <a style="cursor: pointer" class='title' onclick="openNav()">à propos</a>
+            <a href='Projets.html' class='title'>projets</a>
+          </div>
           </div>
           <div class="dropdown1" id="mydrop1">
             <p class='title' style="color: white;">menu</p>
             <p class='title' id="mytitle" style="color: forestgreen; transform: translateX(0px);">à propos</p>
         </div>
-        </div>
       </div>
+      <a style="cursor: pointer;" id="trigram" onclick="openMenu()">&#9776;</a>
+      <div id="menuTrigram">
+        <a style="cursor: pointer" class='title' onclick="openNav()">à propos</a>
+        <a href='Projets.html' class='title'>projets</a>
+      </div>
+      <a style="cursor: pointer;" id="closeTrigram" onclick="closeMenu()">&times;</a>
     </header>
     <main>
-      <div class="affiche">
-        <p class="atelier">Atelier<br>Barœul</p>
-      </div>
+      <p id="affiche">Atelier<br>Baroeul</p>
       <div id="myStripe" class="stripe">
         <div class="bar" style="padding: 2rem;">
           <a href="#section-propos">à propos</a>
@@ -187,19 +196,42 @@
   <script>
     function openNav() {document.getElementById("myStripe").style.opacity = "100%";
     document.getElementById("myInfos").style.display = "grid";
-    document.getElementById("logo").style.display = "none";
-    document.getElementById("logo1").style.display = "inline-flex";
+    document.getElementById("logo1").style.display = "none";
+    document.getElementById("logo2").style.display = "inline-flex";
     document.getElementById("mydrop").style.display = "none";
     document.getElementById("mydrop1").style.display = "inline-flex";
     document.getElementById("mytitle").style.transform = "translateX(-50px)";}
     function closeNav() {document.getElementById("myStripe").style.opacity = "0%";
     document.getElementById("myInfos").style.display = "none";
-    document.getElementById("logo").style.display = "inline-flex";
-    document.getElementById("logo1").style.display = "none";
+    document.getElementById("logo1").style.display = "inline-flex";
+    document.getElementById("logo2").style.display = "none";
     document.getElementById("mydrop").style.display= "inline-flex";
     document.getElementById("mydrop1").style.display = "none";
     document.getElementById("mytitle").style.transform = "translateX(0px)";}
+
+    function openMenu() {
+      document.getElementById("menuTrigram").style.display = "block";
+      document.getElementById("closeTrigram").style.display = "block";
+      document.getElementById("trigram").style.opacity = "0%";
+      document.getElementById("affiche").style.opacity = "0%";
+      setTimeout(function(){
+        document.getElementById("menuTrigram").style.opacity = "100%";
+        document.getElementById("closeTrigram").style.opacity = "100%";
+        document.getElementById("trigram").style.display = "none";
+        document.getElementById("affiche").style.display = "none";
+      }, 200);
+    }
+    function closeMenu() {
+      document.getElementById("menuTrigram").style.opacity = "0%";
+      document.getElementById("closeTrigram").style.opacity = "0%";
+      document.getElementById("trigram").style.display = "block";
+      document.getElementById("affiche").style.display = "block";
+      setTimeout(function(){
+        document.getElementById("menuTrigram").style.display = "none";
+        document.getElementById("closeTrigram").style.display = "none";
+        document.getElementById("trigram").style.opacity = "100%";
+        document.getElementById("affiche").style.opacity = "100%";
+      }, 200);
+    }
   </script>
 </html>
-
-
