@@ -1,0 +1,66 @@
+    @font-face {font-display: block; font-family: 'Diatype Variable'; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff") format("woff"); font-style: normal; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
+    @font-face {font-display: block; font-family: "Diatype Variable"; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff") format("woff"); font-style: italic; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
+    body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; color: white; user-select: none;}
+    footer{position: fixed; bottom: 0; margin: 2rem;}
+    a {text-decoration: none; transition: all .5s ease;}
+    hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
+    a:hover {color: forestgreen;}
+    p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; line-height: normal;}
+    #menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
+    #logo {display: inline-flex; fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
+    #logo text {fill:white}
+    #logo1 {display: none; fill:forestgreen; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
+    #logo1 text {fill:white}
+    #logo1 rect {stroke: forestgreen;}
+    .bar {position: relative; z-index: 999; color: black;}
+    .arrow {position: fixed; margin: 2rem; right: 0; bottom: 0; color: forestgreen; font-size: 1.2rem; font-weight: 300; border-radius: 3px; background-color: white; width: 25px; height: 25px; text-align: center; border: 1px solid forestgreen; line-height: 27px;}
+    .dropdown {position: relative; display: inline-flex;}
+    .dropdown1 {position: relative; display: none; color: black;}
+    .dropdown:hover .dropdown-content {display: block; transition: all .5s ease;}
+    .dropdown-content {display: none; position: relative; min-width: 160px;}
+    .dropbtn {font-size: 1rem; font-weight: 800; padding-left: 2rem;}
+    .dropbtn:hover {color: white;}
+    .title {font-size: 1rem; font-weight: 800; margin-left: 2rem; transition: all .5s ease;}
+    .dropbtn::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
+    .title::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
+    
+    .anchors ul li {display: inline-block; margin: 0px !important; line-height: 25px; list-style-type: none;}
+    .anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
+
+    .affiche {position: absolute; z-index: 1; top: 6rem; left: 2rem; font-size: 5rem; font-weight: 900; transform: translateX(10px);}
+    .atelier {line-height: 5.5rem;}
+    .stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
+    .wrap {margin: auto;}
+    .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease; padding-top: 60px; opacity: 0%;}
+    .infos {position: absolute; top: 6rem; display: none; color: black; grid-template-columns: 1.5fr 1.5fr 1fr 1fr; flex-direction: row-reverse;}
+    .flex-content {padding: 0 0 2rem 2rem;}
+    .contact {padding: 0 0 2rem 2rem; background-color: none;}
+    .cv {display: grid; width: 100%; padding-bottom: 1rem; grid-template-columns: 30px 0px 1fr;}
+    .lieu {padding-left: 1rem;}
+    .ashtray {background-color: black;}
+    .link:hover::before {content:'\00A0\2197\00A0';}
+    ul {list-style: none; margin: 0; padding: 0; position: relative;}
+    li {position: absolute;}
+    .image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
+    .text {display: block; position: absolute; margin: 2rem; right: 0; bottom: 0; text-align: end; font-style: italic;}
+    li:nth-child(5) {animation: xfade 20s 0s infinite;}
+    li:nth-child(4) {animation: xfade 20s 4s infinite;}
+    li:nth-child(3) {animation: xfade 20s 8s infinite;}
+    li:nth-child(2) {animation: xfade 20s 12s infinite;}
+    li:nth-child(1) {animation: xfade 20s 16s infinite;}
+    @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
+
+    /* Mobile ----------------------------------------------- */
+
+    @media screen and (max-width: 768px) {
+      body {font-size: 0.85rem;}
+      .dropdown1 {display: none !important;}
+      .affiche {left: 0rem; transform: translateX(0px); font-size: 4rem; text-align: center; width: 100%;}
+      .atelier {line-height: 4.5rem;}
+      .text {display: none;}
+      #myInfos {display: block !important;}
+      .flex-content {padding: 6rem 2rem 0rem 2rem;}
+      .contact {height: 100vh; background-color: darkseagreen; color: white;}
+      .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
+
+    }
