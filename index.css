@@ -7,12 +7,12 @@
     hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
     a:hover {color: forestgreen;}
     p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; line-height: normal;}
-    #trigram {position: absolute; z-index: 999; margin: 2rem; right: 0; font-size: 1.5rem; width: 2rem; text-align: center;}
+    #trigram {position: absolute; z-index: 999; margin: 2rem; right: 0; font-size: 2rem; width: 2rem; line-height: 2rem; text-align: center;}
     #closeTrigram {display: none; position: absolute; z-index: 999; margin: 2rem; right: 0; font-size: 2.5rem; font-weight: 250; width: 2rem; text-align: center; line-height: 2rem; opacity: 0%; transition: all .5s ease;}
     #menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
     #menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
     #logo {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
-    #logo1 {display: inline-flex; fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
+    #logo1 {display: inline-flex; scale: 130%; fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
     #logo1 text {fill:white}
     #logo2 {display: none; fill:forestgreen; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
     #logo2 text {fill:white}
@@ -25,14 +25,14 @@
     .dropdown-content {display: none; position: relative; min-width: 160px;}
     .dropbtn {font-size: 1rem; font-weight: 800; padding-left: 2rem;}
     .dropbtn:hover {color: white;}
-    .title {font-size: 1rem; font-weight: 800; margin-left: 2rem; transition: all .5s ease;}
+    .title {font-family: "Outfit", sans-serif; font-size: 1rem; font-weight: 500; letter-spacing: 0.1rem; margin-left: 2rem; transition: all .5s ease;}
     .dropbtn::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
     .title::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
     
     .anchors ul li {display: inline-block; margin: 0px !important; line-height: 25px; list-style-type: none;}
     .anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
 
-    #affiche {position: absolute; z-index: 1; top: 6rem; left: 2rem; font-family: "Sometype Mono", monospace; font-size: 5rem; font-weight: 900; line-height: 3rem !important; transform: translateX(10px); opacity: 100%; transition: all .5s ease;}
+    #affiche {position: absolute; z-index: 1; top: 8rem; left: 2rem; font-family: "Outfit", sans-serif; font-size: 5rem; font-weight: 700; line-height: 4rem !important; letter-spacing: 0.1rem; transform: translateX(10px); opacity: 100%; transition: all .5s ease;}
     .stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
     .wrap {margin: auto;}
     .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease; padding-top: 60px; opacity: 0%;}
@@ -61,7 +61,7 @@
       #menu {display: none;}
       #menuTrigram {display: none; opacity: 0; transition: all .5s ease;}
       .dropdown1 {display: none !important;}
-      #affiche {left: 0rem; transform: translateX(0px); font-size: 4rem; text-align: center; width: 100%;}
+      #affiche {left: 0rem; transform: translateX(0px); font-size: 3.5rem; text-align: center; width: 100%;}
       .text {display: none;}
       #myInfos {display: block !important;}
       .flex-content {padding: 6rem 2rem 0rem 2rem;}
