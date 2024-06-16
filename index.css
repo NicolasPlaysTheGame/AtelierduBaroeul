@@ -1,26 +1,26 @@
     * {-webkit-tap-highlight-color: transparent; /* Safari */ -khtml-tap-highlight-color: transparent; /* Konqueror HTML */ -moz-tap-highlight-color: transparent; /* Firefox */ -ms-tap-highlight-color: transparent; /* Internet Explorer/Edge */}
     @font-face {font-display: block; font-family: 'Diatype Variable'; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff") format("woff"); font-style: normal; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
     @font-face {font-display: block; font-family: "Diatype Variable"; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff") format("woff"); font-style: italic; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
-    body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; color: white; user-select: none;}
+    body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; user-select: none;}
+    header {position: absolute; z-index: 999; width: 100%;}
+    .head {position: sticky; margin: 2rem;}
     #foot1 {position: fixed; bottom: 0; margin: 2rem;}
     #foot2 {position: fixed; bottom: 0; margin: 2rem;}
     a {text-decoration: none; transition: all .5s ease;}
+    a:focus {text-decoration: none;}
     hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
-    a:hover {color: forestgreen;}
+    a:hover {color: forestgreen; text-decoration: underline;}
     p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; line-height: normal;}
-    #trigram {position: absolute; z-index: 999; margin: 2rem; right: 0; font-size: 2rem; width: 2rem; line-height: 2rem; text-align: center;}
-    #closeTrigram {display: none; position: absolute; z-index: 999; margin: 2rem; right: 0; font-size: 3.5rem; font-weight: 250; width: 2rem; text-align: center; line-height: 1.8rem; opacity: 0%; transition: all .5s ease;}
+    #trigram {position: absolute; right: 0; font-size: 2rem; width: 2rem; line-height: 2rem; text-align: center;}
+    #closeTrigram {position: absolute; display: none; right: 0; font-size: 3.5rem; font-weight: 250; width: 2rem; text-align: center; line-height: 1.8rem; opacity: 0%; transition: all .5s ease;}
     #menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
     #menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
-    #logo {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
-    #logo1 {display: inline-flex; scale: 130%; fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
-    #logo1 text {fill:white}
-    #logo2 {display: none; fill:forestgreen; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
-    #logo2 text {fill:white}
-    #logo2 rect {stroke: forestgreen;}
+    .home {display: block; float: left; width: 40px; height: 40px;}
+    .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
+    .green {fill:forestgreen}
+    .sections a {padding: 0 5px; font-family: "Outfit", sans-serif; font-size: 1rem; font-weight: 700;}
     #rge {display: none;}
-    .bar {position: relative; z-index: 999; color: black;}
-    .arrow {position: fixed; margin: 2rem; right: 0; bottom: 0; color: forestgreen; font-size: 1.2rem; font-weight: 300; border-radius: 3px; background-color: white; width: 25px; height: 25px; text-align: center; border: 1px solid forestgreen; line-height: 27px;}
+    .arrow {position: fixed; z-index: 999; margin: 2rem; right: 0; bottom: 0; color: forestgreen; font-size: 1.2rem; font-weight: 300; border-radius: 3px; background-color: white; width: 25px; height: 25px; text-align: center; border: 1px solid forestgreen; line-height: 27px;}
     .dropdown {position: relative; display: inline-flex;}
     .dropdown1 {position: relative; display: none; color: black;}
     .dropdown:hover .dropdown-content {display: block; transition: all .5s ease;}
@@ -37,8 +37,8 @@
     #affiche {position: absolute; z-index: 1; top: 8rem; left: 2rem; font-family: "Outfit", sans-serif; font-size: 5rem; font-weight: 700; line-height: 5rem !important; letter-spacing: 0.1rem; transform: translateX(10px); opacity: 100%; transition: all .5s ease;}
     .stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
     #wrap {margin: auto;}
-    .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease; padding-top: 60px; opacity: 0%;}
-    .infos {position: absolute; top: 6rem; display: none; color: black; grid-template-columns: 1.5fr 1.5fr 1fr 1fr; flex-direction: row-reverse;}
+    .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease; padding-top: 60px;}
+    .infos {position: absolute; top: 6rem; color: black; grid-template-columns: 1.5fr 1.5fr 1fr 1fr; flex-direction: row-reverse;}
     .flex-content {padding: 0 0 2rem 2rem;}
     .contact {padding: 0 0 2rem 2rem; background-color: none;}
     .cv {display: grid; width: 100%; padding-bottom: 1rem; grid-template-columns: 30px 0px 1fr;}
@@ -65,7 +65,6 @@
       .dropdown1 {display: none !important;}
       #affiche {position: absolute; top: 50%; left: 0rem; transform: translateY(-60%); font-size: 4.5rem; text-align: center; width: 100%;}
       .text {display: none;}
-      #myInfos {display: block !important;}
       .flex-content {padding: 6rem 2rem 0rem 2rem;}
       .contact {height: 100vh; background-color: darkseagreen; color: white;}
       .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
