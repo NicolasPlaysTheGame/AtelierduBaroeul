@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="logo2.ico" rel="shortcut icon">
@@ -158,6 +157,16 @@
         document.getElementById("foot2").style.display = "none";
         document.getElementById("affiche").style.top = "44%";
       }, 200);
+    }
+
+    window.addEventListener('load', function(event) {
+      document.getElementsByTagName('main')[0].style.opacity = "100%";
+    });
+    window.addEventListener('beforeunload', function(event) {
+      document.getElementsByTagName('main')[0].style.opacity = "0%";
+    });
+    window.onbeforeunload = function () {
+      document.getElementsByTagName('main')[0].style.opacity = "0%";
     }
   </script>
 </html>
