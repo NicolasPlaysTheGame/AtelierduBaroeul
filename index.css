@@ -1,8 +1,10 @@
     * {-webkit-tap-highlight-color: transparent; /* Safari */ -khtml-tap-highlight-color: transparent; /* Konqueror HTML */ -moz-tap-highlight-color: transparent; /* Firefox */ -ms-tap-highlight-color: transparent; /* Internet Explorer/Edge */}
     @font-face {font-display: block; font-family: 'Diatype Variable'; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff") format("woff"); font-style: normal; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
     @font-face {font-display: block; font-family: "Diatype Variable"; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff") format("woff"); font-style: italic; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
+    @font-face {font-family: 'Outfit'; src: url('Outfit-VariableFont_wght.ttf');}
     body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; user-select: none;}
     header {position: absolute; z-index: 999; width: 100%;}
+    main {opacity: 0%; transition: all 0.5s ease;}
     .head {position: sticky; display: inline-block; width: 100%; padding: 2rem;}
     .bg-white {background-color: rgba(255, 255, 255, 0.9);}
     #foot1 {position: fixed; bottom: 0; margin: 2rem;}
@@ -18,9 +20,10 @@
     #menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
     .home {float: left; width: 40px; height: 40px;}
     .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
-    .green {fill:forestgreen}
-    .sections {float: right; line-height: 40px;}
-    .sections a {padding: 0 5px; font-family: "Outfit", sans-serif; font-size: 1rem; font-weight: 700;}
+    .green {fill:brown}
+    .sections {display: flex; float: right; height: 40px;}
+    .sections a:not(:last-child) {display: inline-flex; align-items: center; padding: 0 5px; font-family: "Outfit", sans-serif; font-size: 1rem; font-weight: 700;}
+    .back {display: inline-flex; padding-left: 15px; font-size: 2rem;}
     #rge {display: none;}
     .arrow {position: fixed; z-index: 999; margin: 2rem; right: 0; bottom: 0; color: forestgreen; font-size: 1.2rem; font-weight: 300; border-radius: 3px; background-color: white; width: 25px; height: 25px; text-align: center; border: 1px solid forestgreen; line-height: 27px;}
     .dropdown {position: relative; display: inline-flex;}
@@ -57,6 +60,10 @@
     #wrap ul li:nth-child(2) {animation: xfade 20s 12s infinite;}
     #wrap ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
     @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
+    .medal {display: inline-block; width: 90px; height: 90px; border-radius: 90px; background-size: contain;}
+    .medal p {text-align: center; height: 90px; line-height: 90px; color: white; font-size: 0.8rem; font-weight: 500;}
+    .straw {background-image: url('https://compost-ain.fr/wp-content/uploads/2023/06/paille-e1687808270946.jpg');}
+    .clay {background-image: url('https://terrargile.fr/wp-content/uploads/2021/02/nuancier-pisé-mini.jpg');}
 
     /* Mobile ----------------------------------------------- */
 
@@ -68,7 +75,7 @@
       #affiche {position: absolute; top: 44%; left: 0rem; transform: translateY(-60%); font-size: 4.5rem; text-align: center; width: 100%;}
       .text {display: none;}
       .flex-content {padding: 9rem 2rem 0rem 2rem;}
-      .contact {height: 100vh; background-color: darkseagreen; color: white;}
+      .contact {height: 100vh; background-color: peru; color: white;}
       .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
       .title {margin: 0; font-size: 1.5rem;}
       #wrap {filter: grayscale(0%); transition: all .5s ease;}
