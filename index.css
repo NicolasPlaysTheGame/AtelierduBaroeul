@@ -22,7 +22,7 @@
     .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
     .black {stroke: black;}
     .sections {position: fixed; z-index: 999; display: grid; top: 2rem; right: 2rem; justify-items: end;}
-    .sections a {display: inline-flex; align-items: center; padding: 0 5px; font-family: "Outfit", sans-serif; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
+    .sections a {display: inline-flex; align-items: center; padding: 0 5px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
     .back {position: absolute; z-index: 999; bottom: 2rem; font-size: 0.85rem; font-weight: 500; text-transform: uppercase;}
     #rge {display: none;}
     .dropdown {position: relative; display: inline-flex;}
