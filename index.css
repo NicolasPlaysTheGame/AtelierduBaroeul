@@ -19,7 +19,7 @@
     #menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
     #menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
     .home {float: left; width: 40px; height: 40px;}
-    .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.5px; stroke-linecap:round;}
+    .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:1.1px; stroke-linecap:round;}
     .black {stroke: black;}
     .sections {position: fixed; z-index: 999; display: grid; top: 2rem; right: 2rem; justify-items: end;}
     .sections a {display: inline-flex; align-items: center; padding: 0 5px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
