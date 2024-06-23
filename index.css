@@ -76,7 +76,7 @@
       #affiche {position: absolute; top: 44%; left: 0rem; transform: translateY(-60%); font-size: 4.5rem; text-align: center; width: 100%;}
       .text {display: none;}
       .flex-content {padding: 9rem 2rem 0rem 2rem;}
-      .contact {height: 100vh; background-color: peru; color: black;}
+      .contact {height: 100vh; background-color: sienna; color: black;}
       .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
       .title {margin: 0; font-size: 1.5rem;}
       #wrap {filter: grayscale(0%); transition: all .5s ease;}
