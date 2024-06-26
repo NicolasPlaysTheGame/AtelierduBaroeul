@@ -37,8 +37,11 @@
             </div>
           </div>
         </div>
-        <a id="trigram" onclick="openMenu()">&#9776;</a>
-        <a id="closeTrigram" onclick="closeMenu()">&times;</a>
+        <a id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">
+          <span class="menu-toggle-bar menu-toggle-bar--top"></span>
+          <span class="menu-toggle-bar menu-toggle-bar--middle"></span>
+          <span class="menu-toggle-bar menu-toggle-bar--bottom"></span>
+        </a>
       </div>
     </header>
     <main>
@@ -122,10 +125,15 @@
     </footer>
   </body>
   <script>
+    var menu = false;
+
+    function toggleMenu() {
+      menu ? closeMenu() : openMenu();
+    }
+
     function openMenu() {
+      document.getElementById("menu-toggle").classList.add("nav-open");
       document.getElementById("menuTrigram").style.display = "block";
-      document.getElementById("closeTrigram").style.display = "block";
-      document.getElementById("trigram").style.opacity = "0%";
       document.getElementById("affiche").style.opacity = "0%";
       document.getElementById("foot1").style.opacity = "0%";
       document.getElementById("foot2").style.display = "block";
@@ -133,18 +141,17 @@
       document.getElementById("affiche").style.top = "42%";
       setTimeout(function(){
         document.getElementById("menuTrigram").style.opacity = "100%";
-        document.getElementById("closeTrigram").style.opacity = "100%";
-        document.getElementById("trigram").style.display = "none";
         document.getElementById("affiche").style.display = "none";
         document.getElementById("foot1").style.display = "none";
         document.getElementById("foot2").style.opacity = "100%";
         document.getElementById("menuTrigram").style.top = "47%";
       }, 200);
+      menu = true;
     }
+
     function closeMenu() {
+      document.getElementById("menu-toggle").classList.remove("nav-open");
       document.getElementById("menuTrigram").style.opacity = "0%";
-      document.getElementById("closeTrigram").style.opacity = "0%";
-      document.getElementById("trigram").style.display = "block";
       document.getElementById("affiche").style.display = "block";
       document.getElementById("foot1").style.display = "block";
       document.getElementById("foot2").style.opacity = "0%";
@@ -152,13 +159,12 @@
       document.getElementById("menuTrigram").style.top = "45%";
       setTimeout(function(){
         document.getElementById("menuTrigram").style.display = "none";
-        document.getElementById("closeTrigram").style.display = "none";
-        document.getElementById("trigram").style.opacity = "100%";
         document.getElementById("affiche").style.opacity = "100%";
         document.getElementById("foot1").style.opacity = "100%";
         document.getElementById("foot2").style.display = "none";
         document.getElementById("affiche").style.top = "44%";
       }, 200);
+      menu = false;
     }
 
     window.addEventListener('load', function(event) {
