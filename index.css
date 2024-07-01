@@ -16,14 +16,13 @@
     hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
     a:hover {color: sienna;}
     p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; line-height: normal;}
-    #trigram {position: absolute; right: 2rem; font-size: 2rem; width: 2rem; text-align: center;}
-    #closeTrigram {position: absolute; right: 2rem; display: none; font-size: 3.5rem; font-weight: 250; width: 2rem; text-align: center; line-height: 40px; opacity: 0%; transition: all .5s ease;}
     #menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
     #menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
-    .home {float: left; width: 48px; height: 48px;}
-    .logo {fill:none; stroke:white; stroke-miterlimit:10; stroke-linejoin:round; stroke-width:0.8px; stroke-linecap:round;}
-    .black {stroke: black;}
-    .sections {position: fixed; z-index: 999; display: grid; top: 2rem; right: 2rem; justify-items: end;}
+    .home {float: left; width: 60px; height: 60px;}
+    svg, text {transition: all 0.5s ease;}
+    .white {fill: white;}
+    .black {fill: black;}
+    .sections {position: fixed; z-index: 999; display: grid; top: 2rem; right: 2rem; justify-items: end; overflow: hidden;}
     .sections a {display: inline-flex; align-items: center; padding: 0 5px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
     .back {position: absolute; z-index: 999; bottom: 2rem; text-transform: uppercase;}
     #rge {display: none;}
@@ -41,6 +40,7 @@
     .anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
 
     #affiche {position: absolute; z-index: 1; top: 8rem; left: 2rem; font-family: "Outfit", sans-serif; font-size: 5rem; font-weight: 700; line-height: 5rem !important; letter-spacing: 0.1rem; transform: translateX(10px); opacity: 100%; transition: all .5s ease;}
+    #affiche p {line-height: 60px;}
     .stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
     #wrap {margin: auto;}
     .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease;}
@@ -70,6 +70,7 @@
 
     @media screen and (max-width: 768px) {
       body {font-size: 0.95rem;}
+      a:hover {color: black;}
       #menu {display: none;}
       #menuTrigram {position: absolute; top: 45%; transform: translateY(-80%); display: none; opacity: 0; line-height: 3rem; transition: all .5s ease;}
       .dropdown1 {display: none !important;}
@@ -80,9 +81,12 @@
       .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
       .title {margin: 0; font-size: 1.5rem;}
       #wrap {filter: grayscale(0%); transition: all .5s ease;}
+      
+      .sections a {position: relative;}
+      .sections a.arrow::after {content: "←"; padding-left: 8px;}
 
-      .menu-toggle {position: absolute; right: 2rem; height: 48px; width: 30px;}      
-      .menu-toggle-bar {display: block; position: absolute; top: 50%; margin-top: -1px; right: 0; width: 100%; height: 2.5px; background-color: white; transition: all .5s ease;}
+      .menu-toggle {position: absolute; right: 2rem; height: 60px; width: 30px;}      
+      .menu-toggle-bar {display: block; position: absolute; top: 50%; margin-top: -1px; right: 0; width: 100%; height: 3px; background-color: white; transition: all .5s ease;}
       .menu-toggle-bar.menu-toggle-bar--top {transform: translate(0, -10px);}
       .menu-toggle-bar.menu-toggle-bar--bottom {transform: translate(0, 10px);}
         
@@ -90,6 +94,6 @@
       .nav-open  .menu-toggle-bar.menu-toggle-bar--middle {opacity: 0;}
       .nav-open  .menu-toggle-bar.menu-toggle-bar--bottom {transform: translate(0, 0) rotate(-45deg);}      
 
-      #foot1 {width: 100%; margin: 2rem 0; font-family: "Outfit", sans-serif; text-align: center; font-size: 1.3rem; font-weight: 300; letter-spacing: 0.02rem; transition: all .5s ease;}
+      #foot1 {width: 100%; margin: 2rem 0; font-family: "Outfit", sans-serif; text-align: center; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem; transition: all .5s ease;}
       #foot2 {display: none; opacity: 0%; margin: 2rem auto; text-align: center; width: 100%; transition: all .5s ease;}
     }
