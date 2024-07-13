@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="logo2.ico" rel="shortcut icon">
     <link rel="stylesheet" href="index.css">
+
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   </head>
   
   <body style="color: white;">
@@ -116,6 +118,7 @@
           </svg>
         </div>
         <p id="affiche">Atelier<br>Barœul</p>
+        <div id="myElement"></div>
         <div id="menu">
           <div class="dropdown">
             <a class="dropbtn">Menu</a>
@@ -261,5 +264,20 @@
     window.onbeforeunload = function () {
       document.getElementsByTagName('main')[0].style.opacity = "0%";
     }
+
+    var myElement = document.getElementById('myElement');
+    var mc = new Hammer(myElement);
+    
+    //enable all directions
+    mc.get('swipe').set({
+      direction: Hammer.DIRECTION_ALL,
+      threshold: 1, 
+      velocity:0.1
+    });
+    
+    // listen to events...
+    mc.on("swipeup swipedown swipeleft swiperight tap press", function(ev) {
+      myElement.textContent = ev.type + " gesture detected.";
+    });
   </script>
 </html>
