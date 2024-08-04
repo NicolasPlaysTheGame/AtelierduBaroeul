@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="index.css">
   </head>
   
-  <body style="color: black;">
+  <body>
     <header>
       <p id="demo"></p>
-        <div class="head bg-white">
+        <div class="head-page">
           <div>
-            <a href="index.html" class="home">
+            <a href="index.html" class="home-page">
               <svg class="logo black" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.63 29.63">
                 <rect height="28.35" width="28.35" y="0.64" x="0.64" rx="2" stroke="none"/>
                 <polyline points="25.77 24.82 14.82 4.82 3.87 24.82"/>
@@ -175,9 +175,15 @@
             </div>
           </div>
           <div class="flex-content contact" id="section-contact">
-            <p>235, boulevard Painlevé<br>59000 Lille, Hauts-de-France<br>+33 (0)6 59 42 54 26</p>
+            <p>
+              235, boulevard Painlevé<br>
+              59000 Lille, Hauts-de-France<br>
+              +33 (0)6 59 42 54 26<br>
+              <a href='#' class='link'>atelierbaroeul@gmail.com</a><br><br>
+              8:00 - 18:00 du lundi au vendredi<br>
+              8:00 - 12:00 le samedi
+            </p>
             <br>
-            <a href='#' class='link'>atelierbaroeul@gmail.com</a>
             <br><br>
             <a href="https://www.toerana-habitat.fr" target='blank' class="link">toerana.habitat</a>
             <br><br>
@@ -233,13 +239,11 @@
       }
       if (document.getElementById("myStripe").scrollTop >= document.getElementById("section-contact").offsetTop) {
         document.getElementsByClassName("sections")[0].children[2].style.fontWeight = "600";
-        document.getElementsByClassName("sections")[0].children[2].style.color = "white";
         document.getElementsByClassName("sections")[0].children[2].classList.add("arrow");
         document.getElementsByClassName("black")[0].style.fill = "white";
         document.getElementsByClassName("sections")[0].children[2].style.right = "0px";
       } else {
         document.getElementsByClassName("sections")[0].children[2].style.fontWeight = "";
-        document.getElementsByClassName("sections")[0].children[2].style.color = "";
         document.getElementsByClassName("sections")[0].children[2].classList.remove("arrow");
         document.getElementsByClassName("black")[0].style.fill = "";
         document.getElementsByClassName("sections")[0].children[2].style.right = "-20px";
