@@ -4,21 +4,24 @@
 @font-face {font-family: 'Outfit'; src: url('Outfit-VariableFont_wght.ttf');}
 @font-face {font-family: 'Montserrat Variable'; src: url('Montserrat-VariableFont_wght.ttf');}
 @font-face {font-family: 'Montserrat Italic'; src: url('Montserrat-Italic-VariableFont_wght.ttf');}
-body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; user-select: none;}
-header {position: absolute; z-index: 999; width: 100%;}
-main {opacity: 0%; transition: all 0.5s ease;}
-.head {position: sticky; display: inline-block; width: 100%; padding: 2rem 2rem 3rem;}
-.bg-white {background-color: transparent}
-#foot1 {position: fixed; bottom: 0; margin: 2rem;}
-#foot2 {position: fixed; bottom: 0; margin: 2rem;}
+
+body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; color:white; user-select: none;}
+hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a {text-decoration: none; transition: all .5s ease;}
 a:focus {text-decoration: none;}
-hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a:hover {color: sienna;}
 p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; line-height: normal;}
-#menu {position: absolute; z-index: 999; display:flex; margin: 2rem; justify-content: space-between;}
-#menuTrigram {position: absolute; top: 8rem; z-index: 999; display:flex; justify-content: space-between; text-align: center; width: 100%;}
-.home {float: left; width: 60px; height: 60px;}
+
+/* Header ----------------------------------------------- */
+
+header {position: absolute; z-index: 999; width: 100%; height: 100%;}
+.head-index, .head-page {position: sticky; display: inline-block; width: 100%; padding: 2rem 2rem 3rem;}
+.home-index, .home-page {float: left; width: 60px; height: 60px;}
+
+/* Main ----------------------------------------------- */
+
+main {opacity: 0%; transition: all 0.5s ease;}
+
 svg, text {transition: all 0.5s ease;}
 .white {fill: white;}
 .black {fill: black;}
@@ -26,22 +29,12 @@ svg, text {transition: all 0.5s ease;}
 .sections a {display: inline-flex; align-items: center; padding: 0 5px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
 .back {position: absolute; z-index: 999; bottom: 2rem; text-transform: uppercase;}
 #rge {display: none;}
-.dropdown {position: relative; display: inline-flex;}
-.dropdown1 {position: relative; display: none; color: black;}
-.dropdown:hover .dropdown-content {display: block; transition: all .5s ease;}
-.dropdown-content {display: none; position: relative; min-width: 160px;}
-.dropbtn {font-size: 1rem; font-weight: 800; padding-left: 2rem;}
-.dropbtn:hover {color: white;}
-.title {font-family: "Outfit", sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0.06rem; margin-left: 2rem; transition: all .5s ease;}
-.dropbtn::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
-.title::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
 
 .anchors ul li {display: inline-block; margin: 0px !important; line-height: 25px; list-style-type: none;}
 .anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
 
 #affiche {font-family: "Mooli", sans-serif; font-weight: 400; font-size: 5rem; opacity: 100%; transition: all .5s ease;}
 #affiche p {line-height: 60px;}
-.swipe {position: absolute; z-index: 999; display: inline; text-align: center; width: 100%; top: 27rem; font-size: 2.5rem; font-weight: 300;}
 .stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
 #wrap {margin: auto;}
 .stripe {z-index: 1; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; background-color: white; overflow-x: hidden; scroll-behavior: smooth; transition: all 0.8s ease;}
@@ -70,37 +63,22 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {font-size: 0.95rem;}
+  body {font-size: 0.95rem; transition: all .3s ease;}
   a:hover {color: black;}
-  .head {margin-top: 9rem;}
-  .home {margin: 0 auto; float: none; height: 120px; width: 120px;}
-  #menu {display: none;}
-  #menuTrigram {position: absolute; top: 45%; transform: translateY(-80%); display: none; opacity: 0; line-height: 3rem; transition: all .5s ease;}
-  .dropdown1 {display: none !important;}
-  #affiche {font-size: 0.9rem; font-weight: 500; letter-spacing: 4.8px; line-height: 1.2rem;text-align: center; width: 100%;}
+  .head-index {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);}
+  .home-index {margin: 0 auto; float: none; height: 65px; width: 70px;}
+  #affiche {font-size: 1.3rem; margin: 0.6rem 0; text-align: center;}
   .text {display: none;}
   .flex-content {padding: 9rem 2rem 0rem 2rem;}
   .contact {height: 100vh; background-color: sienna; color: black;}
-  .contact::before {content: "Atelier Barœul"; text-transform: uppercase;}
-  .title {margin: 0; font-size: 1.5rem;}
-  #wrap {filter: grayscale(0%); transition: all .5s ease;}
-
-  .swipe {animation: wait 5s infinite;}
-  @keyframes wait {
-    0%   {top: 27rem; opacity: 0;}
-    5%   {top: 28rem; opacity: 1;}
-    10%  {top: 27rem;}
-    20%  {top: 28rem; opacity: 1;}
-    30%  {top: 27rem; opacity: 0;}
-    100% {top: 28rem; opacity: 0;}
-  }
-
-  .bar {border-right: 3px solid; height: 40px; display: inline-block;}
-  .arrow-head {border-style: solid; border-width: 0 3px 3px 0; display: inline-block; transform: rotate(45deg); width: 15px; height: 15px; position: relative; left: -17px;}
+  .contact p {margin-top: 0.1rem;}
+  .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
+  #wrap {filter: grayscale(0%); transition: all .3s ease;}
   
   .sections a {position: relative;}
   .sections a.arrow::after {content: "←"; padding-left: 8px;}
 
-  #foot1 {display: none; width: 100%; margin: 2rem 0; font-family: "Outfit", sans-serif; text-align: center; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem; transition: all .5s ease;}
-  #foot2 {display: none; opacity: 0%; margin: 2rem auto; text-align: center; width: 100%; transition: all .5s ease;}
+  footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 2rem;}
+  #title2 {width: 100%; font-family: "Outfit", sans-serif; text-align: center; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem; transition: all .5s ease;}
+  #goTo {display: block; margin: 0 auto; width: 20px; height: 20px;}
 }
