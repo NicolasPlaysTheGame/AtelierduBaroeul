@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   
-  <body onscroll="myFunction()">
+  <body onscroll="changeColor()">
     <header>
         <div class="head-page">
             <a href="index.html" class="home-page">
@@ -118,8 +118,6 @@
         <a href="#section-propos">À propos</a>
         <a href="#section-equipe">Équipe</a>
         <a href="#section-contact">Contact</a>
-        <p id="demo">offsetTop: </p>
-        <button onclick="myFunction2()">></button>
       </div>
       <div id="myStripe" class="stripe">
         <div class="infos" id="myInfos">
@@ -206,46 +204,22 @@
     </footer>
   </body>
   <script>
-    function myFunction() {
-      const element = document.getElementById("myStripe");
-      let y = element.scrollTop;
-      document.getElementById ("demo").innerHTML = "scrollTop: " + y.toFixed();
-    }
-
-    function myFunction2() {
-      var element = document.getElementById("section-propos");
-      element.scrollTop += 10;
-    }
-
     function changeColor() {
-      var scroll = document.getElementsByTagName("main")[0].scrollTop;
-      if (scroll < document.getElementById("section-equipe").offsetTop) {
-        document.getElementsByClassName("sections")[0].children[0].style.fontWeight = "600";
-        document.getElementsByClassName("sections")[0].children[0].style.color = "sienna";
-        document.getElementsByClassName("sections")[0].children[0].style.right = "0px";
+      var scroll = document.documentElement;
+      if (scroll.scrollTop < document.getElementById("section-equipe").offsetTop) {
         document.getElementsByClassName("sections")[0].children[0].style.borderBottom = "1px solid #000";
       } else {
-        document.getElementsByClassName("sections")[0].children[0].style.fontWeight = "";
-        document.getElementsByClassName("sections")[0].children[0].style.color = "";
-        document.getElementsByClassName("sections")[0].children[0].style.right = "-20px";
+        document.getElementsByClassName("sections")[0].children[0].style.borderBottom = "1px solid #fff";
       }
-      if (scroll >= document.getElementById("section-equipe").offsetTop && scroll < document.getElementById("section-contact").offsetTop) {
-        document.getElementsByClassName("sections")[0].children[1].style.fontWeight = "600";
-        document.getElementsByClassName("sections")[0].children[1].style.color = "sienna";
-        document.getElementsByClassName("sections")[0].children[1].style.right = "0px";
+      if (scroll.scrollTop >= document.getElementById("section-equipe").offsetTop && scroll.scrollTop < document.getElementById("section-contact").offsetTop) {
+        document.getElementsByClassName("sections")[0].children[1].style.borderBottom = "1px solid #000";
       } else {
-        document.getElementsByClassName("sections")[0].children[1].style.fontWeight = "";
-        document.getElementsByClassName("sections")[0].children[1].style.color = "";
-        document.getElementsByClassName("sections")[0].children[1].style.right = "-20px";
+        document.getElementsByClassName("sections")[0].children[1].style.borderBottom = "1px solid #fff";
       }
-      if (document.getElementById("myStripe").scrollTop >= document.getElementById("section-contact").offsetTop) {
-        document.getElementsByClassName("sections")[0].children[2].style.fontWeight = "600";
-        document.getElementsByClassName("black")[0].style.fill = "white";
-        document.getElementsByClassName("sections")[0].children[2].style.right = "0px";
+      if (scroll.scrollTop >= document.getElementById("section-contact").offsetTop) {
+        document.getElementsByClassName("sections")[0].children[2].style.borderBottom = "1px solid #000";
       } else {
-        document.getElementsByClassName("sections")[0].children[2].style.fontWeight = "";
-        document.getElementsByClassName("black")[0].style.fill = "";
-        document.getElementsByClassName("sections")[0].children[2].style.right = "-20px";
+        document.getElementsByClassName("sections")[0].children[2].style.borderBottom = "1px solid #fff";
       }
     }
 
