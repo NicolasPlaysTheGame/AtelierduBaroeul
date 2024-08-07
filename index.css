@@ -16,10 +16,10 @@ p {margin-block-start: 0; margin-block-end: 0; background-color: transparent; li
 /* Header ----------------------------------------------- */
 
 header {width: 100%;}
-#title {width: 100%; z-index: 999; color: white; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);}
-#content1 {display: block; margin: 0 auto; float: none; height: 85px; width: 90px;}
-#feat {font-family: "Mooli", sans-serif; font-size: 1.6rem; margin: 0.6rem 0; text-align: center; font-weight: 400; transition: all .5s ease;}
-#content2 {width: 100%; font-family: "Outfit", sans-serif; text-align: center; font-size: 1.6rem; font-weight: 600; letter-spacing: 0.06rem; transition: all .5s ease;}
+#title {display: flex; flex-flow: row; align-items: center; justify-content: center; width: 100%; z-index: 999; color: white; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);}
+#content1 {display: block; height: 85px; width: 90px;}
+#feat {font-family: "Mooli", sans-serif; font-size: 1.6rem; margin: 0 1.6rem; text-align: center; font-weight: 400; transition: all .5s ease;}
+#content2 {font-family: "Outfit", sans-serif; text-align: center; font-size: 1.6rem; font-weight: 600; letter-spacing: 0.06rem; transition: all .5s ease;}
 .head-page {width: 100%; z-index: 999; padding: 2rem 2rem 0.5rem; background-color: white; z-index: 999; position: relative;}
 .home-page {display: block; float: left; width: 40px; height: 40px;}
 #name {font-family: "Outfit", sans-serif; line-height: 21px; letter-spacing: 0.05rem; font-weight: 800; font-size: 1.2rem; text-align: right;}
@@ -30,13 +30,15 @@ main {opacity: 0%; transition: all 0.5s ease;}
 
 /* Footer ----------------------------------------------- */
 
-#goTo {display: block; margin: 0 auto; height: 20px;}
+footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 2rem;}
+#scroll {display: block; fill: white; width: 2rem; margin-left: 2rem;}
+#goTo {display: none;}
 
 svg, text {transition: all 0.5s ease;}
 .white {fill: white;}
 .black {fill: black;}
 .sections {position: sticky; top: 0; display: flex; justify-content: space-between; padding: 1.2rem 2rem 1rem; background-color: white; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08);}
-.sections a {display: inline-flex; align-items: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem;}
+.sections a {display: inline-flex; align-items: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem; border-bottom:1px solid #fff; transition: all .3s ease;}
 .back {text-transform: uppercase;}
 #rge {display: none;}
 
@@ -56,7 +58,7 @@ svg, text {transition: all 0.5s ease;}
 #wrap ul {list-style: none; margin: 0; padding: 0; position: relative;}
 #wrap ul li {position: absolute;}
 .image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
-.text {display: block; position: absolute; margin: 2rem auto 3rem; width: 100%; bottom: 0; text-align: center; font-style: italic; color: white;}
+.text {display: block; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 #wrap ul li:nth-child(5) {animation: xfade 20s 0s infinite;}
 #wrap ul li:nth-child(4) {animation: xfade 20s 4s infinite;}
 #wrap ul li:nth-child(3) {animation: xfade 20s 8s infinite;}
@@ -74,15 +76,17 @@ svg, text {transition: all 0.5s ease;}
   body {font-size: 1.05rem; font-weight: 300; transition: all .3s ease;}
   a:hover {color: black;}
 
+  #title {flex-flow: column;}
   #content1 {width: 70px; height: 65px;}
+  #feat {font-size: 1.3rem; margin: 0.6rem 0; text-align: center;}
   #content2 {font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem;}
 
-  #feat {font-size: 1.3rem; margin: 0.6rem 0; text-align: center;}
   .flex-content {padding: 5rem 2rem 0 2rem;}
   .text {display: none;}
-  .contact {height: 100vh; background-color: sienna; color: black;}
+  .contact {height: 101vh; background-color: sienna; color: black;}
   .contact p {margin-top: 0.1rem;}
   .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
 
-  footer {position: fixed; bottom: 0; width: 100%; height: 20px; margin-bottom: 2rem;}
+  #scroll {display: none;}
+  #goTo {display: block; margin: 0 auto; height: 20px;}
 }
