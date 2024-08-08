@@ -70,7 +70,7 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {position: relative; left: 15px; opacity: 0%; font-size: 1.05rem; font-weight: 300; transition: all .5s ease;}
+  body {font-size: 1.05rem; font-weight: 300; transition: all .5s ease;}
   a:hover {color: black;}
 
   #title {flex-flow: column;}
