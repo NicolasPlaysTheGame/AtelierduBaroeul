@@ -81,6 +81,7 @@ svg, text {transition: all 0.5s ease;}
   #content1 {width: 70px; height: 65px;}
   #feat {display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 1.3rem; margin: 0.6rem 0; padding: 0 1rem;}
   #feat a {width: 30px; height: 30px;}
+  #feat p {font-size: 20px;}
   #feat svg {fill: none; stroke: white; stroke-miterlimit: 10; stroke-width: 1.85px; width: 20px; height: 30px;}
   #content2 {font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem;}
 
