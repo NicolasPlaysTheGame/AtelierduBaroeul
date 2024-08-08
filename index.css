@@ -30,8 +30,11 @@ main {opacity: 0%; transition: all 0.5s ease;}
 
 /* Footer ----------------------------------------------- */
 
-footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 2rem;}
-#scroll {display: block; fill: white; width: 2rem; margin-left: 2rem;}
+footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
+.btn {display: table; width: 85px; text-align: center; margin: 0 auto; padding: 0.2rem 0 0; border-top: 2px solid white; font-family: 'Outfit'; color: white; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;}
+.enter-text {display: table-cell; vertical-align: middle;}
+.enter-arrow {display: table-cell; font-size: 1.4rem; font-weight: 200;}
+#scroll {display: none; fill: white; width: 2rem; margin-left: 2rem;}
 #goTo {display: none;}
 
 svg, text {transition: all 0.5s ease;}
@@ -39,6 +42,7 @@ svg, text {transition: all 0.5s ease;}
 .black {fill: black;}
 .sections {position: sticky; top: 0; display: flex; justify-content: space-between; padding: 1.2rem 2rem 1rem; background-color: white; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08);}
 .sections a {display: inline-flex; align-items: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem; border-bottom:1px solid #fff; transition: all .3s ease;}
+.button {background-color: #04AA6D; color: white; padding: 8px 10px; text-align: center; text-decoration: none; cursor: pointer;}
 .back {text-transform: uppercase;}
 #rge {display: none;}
 
@@ -88,5 +92,5 @@ svg, text {transition: all 0.5s ease;}
   .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
 
   #scroll {display: none;}
-  #goTo {display: block; margin: 0 auto; height: 20px;}
+  #goTo {display: none; margin: 0 auto; height: 20px;}
 }
