@@ -24,10 +24,6 @@ header {width: 100%;}
 .home-page {display: block; float: left; width: 40px; height: 40px;}
 #name {font-family: "Outfit", sans-serif; line-height: 21px; letter-spacing: 0.05rem; font-weight: 800; font-size: 1.2rem; text-align: right;}
 
-/* Main ----------------------------------------------- */
-
-main {opacity: 0%; transition: all 0.5s ease;}
-
 /* Footer ----------------------------------------------- */
 
 footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
@@ -74,7 +70,7 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {font-size: 1.05rem; font-weight: 300; transition: all .3s ease;}
+  body {position: relative; left: 15px; opacity: 0%; font-size: 1.05rem; font-weight: 300; transition: all .5s ease;}
   a:hover {color: black;}
 
   #title {flex-flow: column;}
