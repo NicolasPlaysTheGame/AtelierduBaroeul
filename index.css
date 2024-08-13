@@ -19,6 +19,7 @@ header {width: 100%;}
 #title {display: flex; flex-flow: row; align-items: center; justify-content: center; width: 100%; z-index: 999; color: white; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);}
 #content1 {display: block; height: 85px; width: 90px;}
 #feat {font-family: "Mooli", sans-serif; font-size: 1.6rem; margin: 0 1.6rem; text-align: center; font-weight: 400; transition: all .5s ease;}
+#feat a {display: none;}
 #content2 {font-family: "Outfit", sans-serif; text-align: center; font-size: 1.6rem; font-weight: 600; letter-spacing: 0.06rem; transition: all .5s ease;}
 .head-page {width: 100%; z-index: 999; padding: 2rem 2rem 0.5rem; background-color: white; z-index: 999; position: relative;}
 .home-page {display: block; float: left; width: 40px; height: 40px;}
@@ -52,9 +53,9 @@ svg, text {transition: all 0.5s ease;}
 .lieu {padding-left: 1rem;}
 .ashtray {background-color: black;}
 .link:hover::before {content:'\00A0\2197\00A0';}
-#wrap ul {list-style: none; margin: 0; padding: 0; position: relative;}
+#wrap ul {list-style: none; margin: 0; padding: 0; position: relative; height: 100vh;}
 #wrap ul li {position: absolute;}
-.image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
+.image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; border: 0px solid white;}
 .text {display: block; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 #wrap ul li:nth-child(5) {animation: xfade 20s 0s infinite;}
 #wrap ul li:nth-child(4) {animation: xfade 20s 4s infinite;}
@@ -76,10 +77,12 @@ svg, text {transition: all 0.5s ease;}
   #title {flex-flow: column;}
   #content1 {width: 70px; height: 65px;}
   #feat {display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 1.3rem; margin: 0.6rem 0; padding: 0 1rem;}
-  #feat a {width: 30px; height: 30px;}
+  #feat a {display: block; width: 30px; height: 30px;}
   #feat p {font-size: 20px;}
   #feat svg {fill: none; stroke: white; stroke-miterlimit: 10; stroke-width: 1.85px; width: 20px; height: 30px;}
   #content2 {font-size: 1.3rem; font-weight: 500; letter-spacing: 0.02rem;}
+
+  .image {background-attachment: scroll;}
 
   .flex-content {padding: 5rem 2rem 0 2rem;}
   .text {display: none;}
