@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   
-  <body onscroll="changeColor()" style="position: relative; left: 15px; opacity: 0;">
+  <body onscroll="changeColor()" style="position: relative; right: 20px; opacity: 0;">
     <header>
         <div class="head-page">
             <a href="index.html" class="home-page">
@@ -130,14 +130,6 @@
             <p>En ARA, en chantiers participatifs, l'atelier effectue vos travaux </p>
             <p>Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
             <p>Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
-            <div>
-              <div class="medal straw">
-                <p>Paille</p>
-              </div>
-              <div class="medal clay">
-                <p>Enduit terre</p>
-              </div>
-            </div>
           </div>
           <div class="flex-content" id="section-equipe">
             <p><b>Romain @Barœul</b>, artisan</p>
@@ -225,7 +217,7 @@
     }
 
     window.addEventListener('load', function(event) {
-      document.getElementsByTagName('body')[0].style.left = "0";
+      document.getElementsByTagName('body')[0].style.right = "0";
       document.getElementsByTagName('body')[0].style.opacity = "100%";
     });
     window.addEventListener('beforeunload', function(event) {
