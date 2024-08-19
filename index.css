@@ -6,7 +6,7 @@
 @font-face {font-family: 'Montserrat Italic'; src: url('Montserrat-Italic-VariableFont_wght.ttf');}
 
 html {scroll-behavior: smooth;}
-body {background: white; font-family:'Diatype Variable'; font-size: 0.75rem; user-select: none;}
+body {background: white; font-family:'Diatype Variable'; font-size: 1rem; user-select: none;}
 hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a {text-decoration: none; transition: all .5s ease;}
 a:focus {text-decoration: none;}
@@ -25,18 +25,17 @@ header {width: 100%;}
 .item2 {font-family: "Mooli", sans-serif; font-size: 2.2rem;}
 .item3 {font-family: "Outfit", sans-serif; font-size: 1.8rem; font-weight: 500; letter-spacing: 0.06rem;}
 .item4 {grid-area: 2 / 1 / 2 / span 3; font-family: 'Outfit'; font-size: 0.9rem;}
-.head-page {width: 100%; z-index: 999; padding: 2rem 2rem 0.5rem; background-color: white; z-index: 999; position: relative;}
-.home-page {display: block; float: left; width: 40px; height: 40px;}
-#name {font-family: "Outfit", sans-serif; line-height: 21px; letter-spacing: 0.05rem; font-weight: 800; font-size: 1.2rem; text-align: right;}
+.head-page {width: 100%; padding: 2rem 2rem 0.5rem; background-color: white; z-index: 999; position: relative;}
+.home-page {display: block; margin: 0 auto; width: 60px; height: 60px;}
 
 .scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
 .scroll-icon-container:hover {height: 32px;}
 .scroll-icon-container a {display: block; height: 25px;}
 .scroll-icon-container span {height: 25px; font-size: 30px;}
 
-#flex-container {display: flex; position: relative; height: 100vh; font-size: 14px; text-align: center; flex-direction: column; background-color: white;}
+#flex-container {display: flex; position: relative; height: 100vh; text-align: center; flex-direction: column; background-color: white;}
 #flex-container .bio {position: absolute; top: 50%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
-#flex-container .rights {position: absolute; bottom: 3rem; left: 0; right: 0; height: 20px; font-size: 0.9rem;}
+#flex-container .rights, #section-contact .rights {position: absolute; bottom: 2rem; left: 0; right: 0; height: 20px; font-size: 0.9rem;}
 .btn-container {display: flex; justify-content: center; margin-top: 3rem;}
 .btn-page-ab {width: 130px;}
 .btn-separator {width: 20px; font-size: 1.9rem; line-height: 21px;}
@@ -54,15 +53,17 @@ footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
 svg, text {transition: all 0.5s ease;}
 .white {fill: white;}
 .black {fill: black;}
-.sections {position: sticky; top: 0; display: flex; justify-content: space-between; padding: 1.2rem 2rem 1rem; background-color: white; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08);}
-.sections a {display: inline-flex; align-items: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; line-height: 1.2rem; border-bottom:1px solid #fff; transition: all .3s ease;}
+.sections {position: sticky; top: 0; z-index: 10; display: flex; justify-content: center; padding: 1.2rem 0 1rem; background-color: white; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08); font-family: 'Outfit'; letter-spacing: 0.5px;}
+.sections p, .sections a {display: inline-flex; align-items: center; font-weight: 600; text-transform: uppercase; line-height: 1.2rem; border-bottom:1px solid #fff; padding-bottom: 0.5rem; transition: all .3s ease;}
+.sections p {padding: 0 2rem 0.5rem;}
+.sections-menu  {padding: 0 2rem;}
+.sections span {font-size: 1.9rem; line-height: 19px;}
+.sections-menu a:nth-child(2) {margin: 0 2rem;}
 .back {text-transform: uppercase;}
 #rge {display: none;}
 
 .anchors ul li {display: inline-block; margin: 0px !important; line-height: 25px; list-style-type: none;}
 .anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
-
-.stripe .closebtn {position: absolute; top: 2rem; right: 2rem; font-size: 1.5rem; color: black; font-weight: 800;}
 
 .img-container {transform: translateZ(-1px) scale(1.2); margin: auto;}
 .img-container ul {list-style: none; margin: 0; padding: 0; position: relative; height: 100vh;}
@@ -74,22 +75,25 @@ svg, text {transition: all 0.5s ease;}
 .img-container ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
-.stripe {transition: all 0.8s ease;}
-.infos {color: black; grid-template-columns: 1.5fr 1.5fr 1fr 1fr; flex-direction: row-reverse;}
-.flex-content {padding: 0 0 2rem 2rem;}
-.contact {padding: 0 0 2rem 2rem; background-color: none;}
+.flex-content {position: relative; padding: 5rem 16rem; height: 100vh;}
+.flex-content.image {width: 100%; z-index: 20; text-align: center;}
+.contact-container {position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh) translateZ(2px) scale(0.801); text-align: center;}
+.contact-content {margin: 0 auto; padding: 4rem; width: 25rem; border-radius: 5px; background-color: white;}
+.btn-page-home {width: 80px;}
+.btn-page-up {width: 60px;}
+.btn-page-home .menu-link:hover > span {width: 80px;}
+.btn-page-up .menu-link:hover > span {width: 60px;}
 .cv {display: grid; width: 100%; padding-bottom: 1rem; grid-template-columns: 30px 0px 1fr;}
 .lieu {padding-left: 1rem;}
 .ashtray {background-color: black;}
-.link:hover::before {content:'\00A0\2197\00A0';}
 
-.image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; border: 0px solid white;}
+.image {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
 .text {display: none; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {font-size: 1.05rem; font-weight: 300; transition: all .5s ease;}
+  body {font-weight: 300; transition: all .5s ease;}
   a:hover {color: black;}
 
   .grid-container {grid-template-columns: auto; row-gap: 5px;}
@@ -105,13 +109,16 @@ svg, text {transition: all 0.5s ease;}
   .image {background-attachment: scroll;}
 
   #flex-container .bio {width: 70%;}
+  #flex-container .rights {bottom: 1rem; font-size: 0.8rem;}
 
   .flex-content {padding: 5rem 2rem 0 2rem;}
   .text {display: none;}
-  .contact {height: 101vh; background-color: sienna; color: black;}
+  .contact {color: black;}
   .contact p {margin-top: 0.1rem;}
   .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
 
   #scroll {display: none;}
   .scroll-icon-container {display: none;}
+
+  .menu-link span {display: none;}
 }
