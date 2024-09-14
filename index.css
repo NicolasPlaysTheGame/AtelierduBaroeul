@@ -75,7 +75,7 @@ svg, text {transition: all 0.5s ease;}
 .img-container ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
-.flex-content {position: relative; padding: 5rem 16rem; height: 100vh;}
+.flex-content {position: relative; padding: 5rem 25rem; height: 100vh;}
 .flex-content.image {width: 100%; z-index: 20; text-align: center;}
 .contact-container {position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh) translateZ(2px) scale(0.801); text-align: center;}
 .contact-content {margin: 0 auto; padding: 4rem; width: 25rem; border-radius: 5px; background-color: white;}
@@ -107,12 +107,15 @@ svg, text {transition: all 0.5s ease;}
   .item4 {grid-area: 4 / 1 / 4 / 1; margin-top: 20px; font-size: 13px;}
 
   .image {background-attachment: scroll;}
+  
+  .sections >:not(:last-child) {display: none;}
 
   #flex-container .bio {width: 70%;}
   #flex-container .rights {bottom: 1rem; font-size: 0.8rem;}
 
   .flex-content {padding: 5rem 2rem 0 2rem;}
   .text {display: none;}
+  .contact-content {width: 17rem; padding: 4rem 2rem;}
   .contact {color: black;}
   .contact p {margin-top: 0.1rem;}
   .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
