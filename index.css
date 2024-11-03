@@ -25,8 +25,11 @@ header {width: 100%;}
 .item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px;}
 .item2 div:first-child {font-weight: 500; text-transform: uppercase;}
 .item2 div:last-child::before {content: '\00A0\2014\00A0';}
-.head-page {width: 100%; padding: 2rem 2rem 0.5rem; background-color: white; z-index: 999; position: relative;}
-.home-page {display: block; margin: 0 auto; width: 60px; height: 60px;}
+.head-page {width: 100%; padding: 2rem 2rem 0.5rem; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08); background-color: white; z-index: 999; position: relative;}
+.head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
+.menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
+.selected {color: black; /* Couleur de l'onglet sélectionné */}
+.home-page {display: block; margin: 0 auto; width: 60px;}
 
 .scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
 .scroll-icon-container:hover {height: 32px;}
@@ -78,10 +81,10 @@ svg, text {transition: all 0.5s ease;}
 .img-container ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
-.flex-content {position: relative; padding: 5rem 25rem; height: 100vh;}
-.flex-content.image {width: 100%; z-index: 20; text-align: center;}
-.contact-container {position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh) translateZ(2px) scale(0.801); text-align: center;}
-.contact-content {margin: 0 auto; padding: 4rem; width: 25rem; border-radius: 5px; background-color: white;}
+.flex-content {position: relative; padding: 5rem 25rem;}
+.flex-content.image {width: 100%; transform: translateY(0vh) translateZ(-1px) scale(1.1); text-align: center;}
+.contact-container {position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh); text-align: center;}
+.contact-content {margin: 0 auto; padding: 4rem; width: 25rem; color: white;}
 .btn-page-home {width: 80px;}
 .btn-page-up {width: 60px;}
 .btn-page-home .menu-link:hover > span {width: 80px;}
@@ -99,21 +102,27 @@ svg, text {transition: all 0.5s ease;}
   body {font-size: 15px; font-weight: 300; line-height: 21px; transition: all .5s ease;}
   h2 {font-size: 20px; line-height: 25px;}
   a:hover {color: black;}
-  
+
+  .head-page {padding: 15px 30px 8px; justify-content: space-between;}
+  .home-page {width: 40px;}
+  .head-page .menu-icon {display: block; font-size: 27px;}
+  .menu {flex-direction: column; justify-content: space-between; align-items: end; overflow: hidden; font-family: 'Outfit'; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;}
+    
   .grid-container {width: 100%;}
   .item1 {width: 100px;}
   .item2 {align-items: center; flex-direction: column; font-size: 16px;}
   .item2 div:last-child::before {content: none;}
 
   .image {background-attachment: scroll;}
-  
+
+  .sections {display: none;}  
   .sections >:not(:last-child) {display: none;}
 
   #flex-container .bio {width: 70%;}
   #flex-container .bio div:last-child {margin-top: 20px;}
   #flex-container .rights {font-size: 12px;}
 
-  .flex-content {padding: 5rem 2rem 0 2rem;}
+  .flex-content {padding: 30px 30px 0;}
   .text {display: none;}
   .contact-content {width: 17rem; padding: 4rem 2rem;}
   .contact {color: black;}
