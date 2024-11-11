@@ -11,7 +11,7 @@ h2 {margin: 0; font-family: 'Outfit'; font-size: 24px; font-weight: 400; line-he
 hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a {text-decoration: none; transition: all .5s ease;}
 a:focus {text-decoration: none;}
-p {margin-block-start: 10px; margin-block-end: 10px; background-color: transparent;}
+p {margin-block-start: 10px; margin-block-end: 10px; /*Crée un décalage entre les sections*/ background-color: transparent;}
 b {font-weight: bold;}
 
 /* Header ----------------------------------------------- */
@@ -38,18 +38,14 @@ header {width: 100%;}
 
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
 #flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; row-gap: 10px; top: 50%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 50%;}
-#flex-container .bio div:last-child {margin-top: 40px;}
 #flex-container .bio span {text-transform: uppercase;}
 #flex-container .rights, #section-contact .rights {display: block; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 13.5px; text-align: center;}
-#flex-container .rights svg:hover {fill: lightslategrey;}
-.btn-container {display: none; /*display: flex;*/ justify-content: center; margin-top: 3rem;}
-.btn-page-ab {width: 130px;}
-.btn-separator {width: 20px; font-size: 1.9rem; line-height: 21px;}
-.btn-page-sf {width: 110px;}
+.btn-container {display: flex; justify-content: center; column-gap: 20px; margin-top: 3rem; text-align: center;}
+.btn-separator {font-size: 1.9rem; line-height: 21px;}
 .menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 0.9rem; font-family: 'Outfit';}
 .menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid black; text-align: center; transition: width .3s ease;}
-.btn-page-ab .menu-link:hover > span {width: 130px;}
-.btn-page-sf .menu-link:hover > span {width: 110px;}
+.btn-page-ab .menu-link:hover > span {width: 100%;}
+.btn-page-sf .menu-link:hover > span {width: 100%;}
 
 /* Footer ----------------------------------------------- */
 
@@ -82,9 +78,12 @@ svg, text {transition: all 0.5s ease;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
 .flex-content {position: relative; padding: 5rem 25rem;}
+.separator {display: none;}
 .flex-content.image {width: 100%; transform: translateY(0vh) translateZ(-1px) scale(1.1); text-align: center;}
 .contact-container {position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh); text-align: center;}
 .contact-content {margin: 0 auto; padding: 4rem; width: 25rem; color: white;}
+#cv-container {display: flex; flex-direction: row; justify-content: space-between;}
+#cv-content {display: none; padding-top: 30px; /*Crée un problème sur la transition*/ height: 0px; overflow: hidden; transition: all .2s ease;}
 .btn-page-home {width: 80px;}
 .btn-page-up {width: 60px;}
 .btn-page-home .menu-link:hover > span {width: 80px;}
@@ -106,7 +105,7 @@ svg, text {transition: all 0.5s ease;}
   .head-page {padding: 15px 30px 8px; justify-content: space-between;}
   .home-page {width: 40px;}
   .head-page .menu-icon {display: block; font-size: 27px;}
-  .menu {flex-direction: column; justify-content: space-between; align-items: end; overflow: hidden; font-family: 'Outfit'; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;}
+  .menu {flex-direction: column; justify-content: space-between; align-items: end; row-gap: 5px; overflow: hidden; margin-bottom: 5px; font-family: 'Outfit'; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;}
     
   .grid-container {width: 100%;}
   .item1 {width: 100px;}
@@ -119,12 +118,15 @@ svg, text {transition: all 0.5s ease;}
   .sections >:not(:last-child) {display: none;}
 
   #flex-container .bio {width: 70%;}
-  #flex-container .bio div:last-child {margin-top: 20px;}
+  .btn-container {margin-top: 30px;}
   #flex-container .rights {font-size: 12px;}
 
   .flex-content {padding: 30px 30px 0;}
+  .separator {display: block; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
+  .flex-content.image {margin-top: 70px;}
   .text {display: none;}
   .contact-content {width: 17rem; padding: 4rem 2rem;}
+  .contact-container .btn-container {margin-top: 0px;}
   .contact {color: black;}
   .contact p {margin-top: 0.1rem;}
   .contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}
