@@ -73,7 +73,7 @@ svg, text {transition: all 0.5s ease;}
 .sections {top: 0; z-index: 10; display: flex; padding: 0.8rem 0; font-family: 'Outfit'; letter-spacing: 0.4px;}
 .sections a {display: inline-flex; align-items: center; font-family: 'Outfit'; font-size: 16px; font-weight: 500; text-transform: uppercase; border-bottom:1px solid #fff; transition: all .3s ease;}
 .sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}
-.active, .active::after {content: "\00A0\2193";}
+.active, .active::after, .selected::after {content: "\00A0\2193";}
 .back {text-transform: uppercase;}
 #rge {display: none;}
 
@@ -115,7 +115,7 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {text-align: justify; transition: all .5s ease;}
+  body {transition: all .5s ease;}
   a:hover {color: black;}
 
   .head-page {padding: 15px 15px 8px; justify-content: space-between;}
@@ -141,7 +141,7 @@ svg, text {transition: all 0.5s ease;}
   .table {display: block; padding: 0;}
   .flex-content {padding: 20px 15px 0;}
   .table2 {display: none; padding: 0;}
-  .flex-content2 {padding: 10px 30px 20px; color: white; z-index: 999;}
+  .flex-content2 {padding: 20px 15px 0;}
   .tech {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
   #medal {display: block; width: 100%; height: auto;}
   .separator {display: none; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
@@ -158,7 +158,7 @@ svg, text {transition: all 0.5s ease;}
   .menu-link span {display: none;}
   .menu-link {border-bottom: 1px solid #000000;}
 
-  .savoir-container {position: absolute; top: 0;}
+  .savoir-container {display: none; position: absolute; top: 0;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
 
 
