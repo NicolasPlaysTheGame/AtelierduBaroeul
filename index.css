@@ -29,7 +29,7 @@ header {width: 100%;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
 .head-page .menu-icon {display: none;}
 .menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
-.selected {color: black; /* Couleur de l'onglet sélectionné */}
+.selected {color: white; background-color: #8d5219; padding: 0 3px; /* Couleur de l'onglet sélectionné */}
 .home-page {display: block; margin: 0 auto; width: 55px;}
 
 .scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
@@ -69,7 +69,7 @@ footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
 
 svg, text {transition: all 0.5s ease;}
 .white {fill: white;}
-.black {fill: black;}
+.black {fill: #8d5219;}
 .sections {top: 0; z-index: 10; display: flex; padding: 0.8rem 0; font-family: 'Outfit'; letter-spacing: 0.4px;}
 .sections a {display: inline-flex; align-items: center; font-family: 'Outfit'; font-size: 16px; font-weight: 500; text-transform: uppercase; border-bottom:1px solid #fff; transition: all .3s ease;}
 .sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}
@@ -115,7 +115,7 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {transition: all .5s ease;}
+  body {color: #8d5219; transition: all .5s ease;}
   a:hover {color: black;}
 
   .head-page {padding: 15px 15px 8px; justify-content: space-between;}
