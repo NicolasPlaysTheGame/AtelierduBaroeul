@@ -23,7 +23,7 @@ header {width: 100%;}
 .grid-container {display: flex; align-items: center; flex-direction: column; row-gap: 10px; position: absolute; top: 30%; left: 0; right: 0; /*-ms-transform: translateY(-50%) translateZ(1px); transform: translateY(-50%) translateZ(1px)*/; width: 400px; margin: 0 auto; color: white;}
 .item1 {width: 100px; margin: 0 auto;}
 .item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px;}
-.item2 div:first-child {font-weight: 400; text-transform: uppercase; letter-spacing: 0.5px;}
+.item2 div:first-child {font-size: 20px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
 .item2 div:last-child {display: none;}
 .head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08); background-color: white; z-index: 999; position: relative;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
@@ -39,10 +39,10 @@ svg {fill: #8d5219;}
 .scroll-icon-container span {height: 25px; font-size: 30px;}
 
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
-#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; row-gap: 10px; top: 50%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
+#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 46%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
 #flex-container .bio span {text-transform: uppercase;}
-#flex-container .rights, #section-contact .rights {display: block; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 13.5px; text-align: center;}
-.btn-container {display: flex; justify-content: center; column-gap: 20px; margin-top: 3rem; text-align: center;}
+#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 13.5px; text-align: center;}
+.btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
 .btn-separator {font-size: 1.5rem; line-height: 21px;}
 .menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit';}
 .menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid black; text-align: center; transition: width .3s ease;}
@@ -93,9 +93,9 @@ svg, text {transition: all 0.5s ease;}
 
 .item3 ul {margin: 20px 0 0; padding: 0; text-align: center; list-style: none;}
 .item3 ul li {margin-top: 10px;}
-.item3 ul li:nth-child(1) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 0s ease-out forwards;}
-.item3 ul li:nth-child(2) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 0.5s ease-out forwards;}
-.item3 ul li:nth-child(3) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1s ease-out forwards;}
+.item3 ul li:nth-child(1) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 0.5s ease-out forwards;}
+.item3 ul li:nth-child(2) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1s ease-out forwards;}
+.item3 ul li:nth-child(3) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1.5s ease-out forwards;}
 @keyframes fadeIn {0% {opacity: 0; padding-top: 20px;} 100% {opacity: 1; padding-top: 0px;}}
 
 .table {display: grid; grid-template-columns: 1.3fr 1fr; padding: 0px 5rem; column-gap: 50px;}
@@ -118,7 +118,7 @@ svg, text {transition: all 0.5s ease;}
 .ashtray {background-color: black;}
 
 .image, .image2 {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
-.image3 {width: 1calc(100% - 30px); height: 320px; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9); margin: 10px 15px;}
+.image3 {width: 72vw; height: 72vw; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9);}
 .text {display: none; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 
 /* Mobile ----------------------------------------------- */
@@ -143,14 +143,15 @@ svg, text {transition: all 0.5s ease;}
   .sections {display: none;}  
   .sections >:not(:last-child) {display: none;}
 
-  #flex-container .bio {width: 100%; padding: 0 30px;}
+  #flex-container .bio {width: 60%; text-align: center;}
+  #flex-container .bio h2 {display: none;}
   .btn-container {margin-top: 30px;}
-  #flex-container .rights, #section-contact .rights {font-size: 12px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 12px;}
 
   .table {display: block; padding: 0;}
   .flex-content {padding: 20px 15px 0;}
   .table2 {display: none; padding: 0;}
-  .flex-content2 {padding: 20px 15px 0;}
+  .flex-content2 {padding: 20px 15px 0; height: calc(100vh - 66px);}
   .tech {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
   #medal {display: block; width: 100%; height: auto;}
   .separator {display: none; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
@@ -165,10 +166,13 @@ svg, text {transition: all 0.5s ease;}
   .scroll-icon-container {display: none;}
 
   .menu-link span {display: none;}
-  .menu-link {border-bottom: 1px solid #8d5219;}
+  .menu-link {line-height: 31px; border-bottom: 1px solid #8d5219;}
 
   .savoir-container {display: none; position: absolute; top: 0;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
+
+  #section-contact .rights, #section-propos .rights {display: flex; flex-wrap: wrap; justify-content: space-around; gap: 15px;}
+  .rights:nth-child(2) {align-self: flex-end;}
 
 
 }
