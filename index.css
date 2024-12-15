@@ -25,11 +25,11 @@ header {width: 100%;}
 .item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px;}
 .item2 div:first-child {font-size: 20px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
 .item2 div:last-child {display: none;}
-.head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(0, 0, 0, .08); background-color: white; z-index: 999; position: relative;}
+.head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08); background-color: white; z-index: 999; position: relative;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
 .head-page .menu-icon {display: none;}
 .menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
-.selected {color: white; background-color: #8d5219; padding: 0 3px; /* Couleur de l'onglet sélectionné */}
+.selected {color: white; background-color: #8d5219; padding: 0 4px; border-radius: 1px; /* Couleur de l'onglet sélectionné */}
 .home-page {display: block; margin: 0 auto; width: 55px;}
 svg {fill: #8d5219;}
 
@@ -41,7 +41,7 @@ svg {fill: #8d5219;}
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
 #flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 46%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
 #flex-container .bio span {text-transform: uppercase;}
-#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 15px; left: 0; right: 0; font-size: 13.5px; text-align: center;}
+#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px; text-align: center;}
 .btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
 .btn-separator {font-size: 1.5rem; line-height: 21px;}
 .menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit';}
@@ -53,7 +53,7 @@ svg {fill: #8d5219;}
 
 .savoir {padding: 10px 30px 0; width: 100%; position: absolute; display: flex; flex-direction: column; text-align: center;}
 .table2 {display: none; padding: 0px 5rem; column-gap: 25px;}
-.flex-content2 {position: relative; padding: 0px 5rem; padding-top: 25px;}
+.flex-content2 {position: relative; bottom: 0; color: white;}
 .row {display: flex; gap: 10px;}
 #savoir-img {display: block; background-repeat: no-repeat; max-width: 100%; background-color: antiquewhite;}
 .tech {display: flex; justify-content: space-evenly;}
@@ -121,6 +121,36 @@ svg, text {transition: all 0.5s ease;}
 .image3 {width: 72vw; height: 72vw; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9);}
 .text {display: none; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 
+/* Carrousel -------------------------------------------*/
+
+.gallery {position: relative; overflow: hidden;}
+/* Cacher les boutons radio */
+.gallery input[type="radio"] {display: none;}
+/* Conteneur des images */
+.gallery .slides {display: flex; transition: transform 0.5s ease-in-out;}
+.gallery img {width: 100%; height: calc(100vh - 66px); object-fit: cover; cursor: pointer;}
+/* Cacher les images par défaut */
+.gallery .slide {display: none; position: relative;}
+/* Afficher l'image active */
+.gallery input#img1:checked ~ .slides .slide1,
+.gallery input#img2:checked ~ .slides .slide2,
+.gallery input#img3:checked ~ .slides .slide3,
+.gallery input#img4:checked ~ .slides .slide4,
+.gallery input#img5:checked ~ .slides .slide5,
+.gallery input#img6:checked ~ .slides .slide6 {display: block;}
+/* Overlay avec le texte */
+.gallery .slide .overlay {position: absolute; color: white; top: 0; left: 0; padding: 15px;}
+/* Indicateurs en forme de points */
+.gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 13px; color: transparent;}
+.gallery .indicator {cursor: pointer; transition: color 0.0s;}
+.gallery input#img1:checked ~ .indicators .indicator1 {color: #8d5219; position: absolute;}
+.gallery input#img2:checked ~ .indicators .indicator2,
+.gallery input#img3:checked ~ .indicators .indicator3,
+.gallery input#img4:checked ~ .indicators .indicator4,
+.gallery input#img5:checked ~ .indicators .indicator5,
+.gallery input#img6:checked ~ .indicators .indicator6 {color: white; position: absolute;}
+.gallery .down {display: flex; width: 100vw; padding: 0 15px; justify-content: space-between;}
+
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -146,12 +176,12 @@ svg, text {transition: all 0.5s ease;}
   #flex-container .bio {width: 60%; text-align: center;}
   #flex-container .bio h2 {display: none;}
   .btn-container {margin-top: 30px;}
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 12px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 13px;}
 
   .table {display: block; padding: 0;}
   .flex-content {padding: 20px 15px 0;}
   .table2 {display: none; padding: 0;}
-  .flex-content2 {padding: 20px 15px 0; height: calc(100vh - 66px);}
+  .flex-content2 {width: 100vw;}
   .tech {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
   #medal {display: block; width: 100%; height: auto;}
   .separator {display: none; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
@@ -171,8 +201,5 @@ svg, text {transition: all 0.5s ease;}
   .savoir-container {display: none; position: absolute; top: 0;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
 
-  #section-contact .rights, #section-propos .rights {display: flex; flex-wrap: wrap; justify-content: space-around; gap: 15px;}
-  .rights:nth-child(2) {align-self: flex-end;}
-
-
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-direction: column; flex-wrap: wrap; width: max-content; margin: auto; justify-content: space-around; gap: 15px; padding: 15px;}
 }
