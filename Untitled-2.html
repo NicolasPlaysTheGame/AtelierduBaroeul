@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie d'Images Swipe</title>
+    <title>Galerie d'Images Pleine Largeur</title>
     <style>
         /* Style global */
         body {
@@ -19,6 +19,7 @@
             scroll-snap-type: x mandatory; /* Permet d'appliquer le "snap" sur le défilement horizontal */
             -webkit-overflow-scrolling: touch; /* Améliore le défilement sur les appareils tactiles */
             position: relative;
+            margin: 0;
         }
 
         /* Piste contenant les éléments */
@@ -35,8 +36,8 @@
         }
 
         .gallery-item img {
-            width: 100%;
-            height: auto; /* Conserve le ratio de l'image */
+            width: 100%;  /* Chaque image prend toute la largeur de l'écran */
+            height: auto; /* Maintien le ratio d'aspect de l'image */
             display: block;
         }
 
@@ -45,29 +46,30 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Ajout de quelques marges et espaces autour de l'image */
-        .gallery {
-            margin: 10px 0;
-            padding-bottom: 10px;
-        }
-
         /* Optionnel : style pour les images sur le survol (pour les ordinateurs, mais pas utilisé sur les mobiles) */
         .gallery-item img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
-        /* Ajout d'un fond de couleur sur la page pour un meilleur contraste */
+        /* Ajout de quelques marges et espaces autour de l'image */
         .container {
             background-color: #ffffff;
-            padding: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* Style du titre */
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 style="text-align: center;">Galerie d'Images</h1>
+    <h1>Galerie d'Images Pleine Largeur</h1>
 
     <!-- Galerie d'images -->
     <div class="gallery">
