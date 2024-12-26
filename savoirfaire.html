@@ -1,205 +1,318 @@
-* {-webkit-tap-highlight-color: transparent; /* Safari */ -khtml-tap-highlight-color: transparent; /* Konqueror HTML */ -moz-tap-highlight-color: transparent; /* Firefox */ -ms-tap-highlight-color: transparent; /* Internet Explorer/Edge */}
-@font-face {font-display: block; font-family: 'Diatype Variable'; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable.woff") format("woff"); font-style: normal; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
-@font-face {font-display: block; font-family: "Diatype Variable"; src: url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff2") format("woff2-variations"), url("https://type.cargo.site/files/Cargo-DiatypePlusVariable-Italic.woff") format("woff"); font-style: italic; font-weight: 200 1000; unicode-range: U+0000-DFFF, U+F900-FFFD;}
-@font-face {font-family: 'Outfit'; src: url('Outfit-VariableFont_wght.ttf');}
-@font-face {font-family: 'Montserrat Variable'; src: url('Montserrat-VariableFont_wght.ttf');}
-@font-face {font-family: 'Montserrat Italic'; src: url('Montserrat-Italic-VariableFont_wght.ttf');}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AB - Home</title>
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-html {scroll-behavior: smooth;}
-body {background: white; font-family:'Outfit'; font-size: 16px; font-weight: 300; line-height: 21px; letter-spacing: -0.2px; user-select: none;}
-h2 {margin: 0; font-family: 'Outfit'; font-size: 16px; font-weight: 500; line-height: 31px; letter-spacing: 0.5px; border-bottom: 1px solid; width: max-content;}
-hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
-a {text-decoration: none; transition: all .5s ease;}
-a:focus {text-decoration: none;}
-p {margin-block-start: 20px; margin-block-end: 20px; /*Crée un décalage entre les sections*/ background-color: transparent;}
-b {font-weight: 500; letter-spacing: 0.2px;}
+    <link href='https://db.onlinewebfonts.com/c/4c4a87973ef80fc72049e01b9085fadc?family=ABC+Diatype' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-/* Header ----------------------------------------------- */
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="svg.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  
+  <body class="parallax" onscroll="changeColor()" style="opacity: 0;">
+    <div class="head-page">
+      <div>
+        <div>
+          <a href="index.html" class="home-page">
+            <svg class="logo black" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 144.5 135.3" xml:space="preserve">
+              <path d="M91.6,52.1c-1.2,1.3-0.6,2.7-0.4,4.2c0.1,0.7,0,1.4,0,2.4c-1-0.6-1.6-1-2.3-1.5c-0.2,1-0.4,1.7-0.6,2.7
+              c-2.4-0.7-3.7,0.7-4.5,2.3c-2.9,0.1-5.8-0.3-8.5,0.4c-2.1,0.5-3.3,0.1-4.7-1.2c-0.3-0.3-0.8-0.4-1.1-0.6c0.1-0.1,0.1-0.3,0.2-0.4
+              c-1.9,0-3.9,0.1-5.8,0.1c-0.3,0-0.7-0.2-0.7-0.4c-0.1-2-2.2-2.4-2.9-4c-0.2-0.4-1.1-0.5-1.7-0.7c-0.6-0.1-1.2-0.1-1.8-0.1
+              c0,0.1,0,0.5,0,0.9c-0.1,0-0.3,0.1-0.3,0.1c-0.4-0.8-0.8-0.6-1.4-0.3c-2.4,1-2.9,3.4-4.2,5.2c-1,1.2-0.9,2.7-1.2,4.1
+              c-0.3,1.2-1.3,2.3-2.1,3.6c-0.3-0.5-0.5-0.9-0.8-1.4c-0.7,0.7-1.9,1.3-2.1,2.1c-0.5,2.9-1.8,5.2-3.9,7.2c-0.2,0.2-0.3,0.6-0.2,0.8
+              c0.1,1.5-0.9,2.4-1.6,2.8c-0.4,0.9-0.4,1.7-0.8,1.9c-1.8,0.9-1.7,2.5-1.8,4c-0.5,0-0.9,0-1,0c-0.4,1.2-0.6,2.1-0.9,3
+              c-0.4,1-1.1,1.8-0.1,3c0.4,0.5-0.1,1.8-0.3,3.1c-0.3-0.6-0.5-0.9-0.6-1.1c-0.8,0.2-1.6,0.5-2.6,0.7c-0.3,1-0.6,2.2-1.1,3.3
+              c-0.2,0.4-0.8,0.7-1.2,1c-0.3,0.2-0.7,0.4-0.9,0.6c-0.7,0.9-1.5,1.8-2.1,2.8c-1,1.5-1.9,3-2.9,4.5c-1,1.6-1.9,3.2-2.9,4.8
+              c-0.1,0.1-0.2,0.2-0.1,0.3c0.5,2.2-1.1,2.3-2.6,2.7c-0.4,0.1-0.9,0.6-1,1c-0.4,1.3-2.1,2.7-3.5,2.8c-0.4,2.3-1,4.5-3.2,5.9
+              c-0.8,0.6-1.2,1.7-1.9,2.7c-0.6-0.2-1.4-0.6-2.5-1.1c0-0.1-0.2-0.5-0.3-0.8c-1.1-0.5-3.9,2.1-3-1.7c-0.6-0.3-1.1-0.6-1.7-0.9
+              c2.4-1.4,0.9-3.7,1.4-4.9c2-1.8,4.1-2.9,5-4.7c0.6-1.3,1.7-2.4,2.2-3.8c0.6-1.5,1.8-2.8,2.7-4.3c0.5-0.8,0.7-1.7,1.2-2.9
+              c2.1-0.3,2.2-2.5,2.9-4.3c0.2-0.5,0.3-1,0.7-1.3c1.5-1.5,1.5-1.5-0.4-2.7c0.8-0.2,1.6-0.2,2.2-0.5c0.6-0.3,1.1-0.8,2-1.5
+              c-0.5-1-1.1-2-1.7-3.1c-0.3,0.2-0.6,0.5-0.9,0.7c0.3,0.1,0.7,0.1,1,0.2c1.8,0.9,2.9,0.1,2.9-1.9c0-0.3,0.1-0.8,0.3-0.9
+              c2.1-1.4,2.5-3.7,3.1-5.9c0.1-0.4,0.2-0.8,0.4-1.1c1.4-1.5,2.4-3.1,2.5-5.2c1.8-0.7,1.2-3.2,3.1-4c0.9-0.3,1.3-1.7,2-2.5
+              c0.4-0.5,0.7-1.2,1.7-1c0.4,0.1,1.3-1.5,1.5-2.4c0.2-1,0.4-1.6,1.5-2.1c1.2-0.5,2.3-1.7,2.1-3.4c-1.2-0.6-1.2-1.5,0.1-2.3
+              c-1.6-1.3-0.9-2.6-0.3-3.9c0.4-0.7,0.4-1.6,0.7-2.4c0.4-1.2,0.8-2.4,1.4-3.6c1.1-1.9,1.1-1.9-0.6-3.4c-0.7,0.3-1.5,0.5-2,1
+              c-1.1,1-2.1,2.1-3.1,3.1c-0.3,0.3-0.6,0.6-0.9,0.9c-0.5,0.5-0.9,1-1.4,1.6c-1-0.4-2.2,0.8-2.1,2.6c-1-0.3-1.9-0.7-2.9-0.8
+              c-1.1-0.1-1.4,0.6-1.1,2c-0.6,0.8-1,1.4-1.4,2c-0.2,0.3-0.6,0.7-0.7,0.6c-2.1-0.9-1.7,0.9-2,1.9c0,0.1-0.1,0.3-0.1,0.5
+              c-0.9-0.3-1.5-0.3-1.1,1.1c-2.2-0.9-4.2-0.3-6.3,0c-1.7,0.2-3.6-0.2-5.3-0.6c-2.7-0.7-3.2-1.8-2.6-4.6c0.1-0.3,0-0.7-0.1-1
+              c-0.2-1-0.3-1.8,1.1-1.9c0.3,0,0.6-0.8,0.8-1.1c0.8-0.3,1.6-0.7,2.5-1c0.4-0.1,0.8-0.3,1.2-0.3c3.2,0.7,5.3-1.1,7.2-3.3
+              c1.5-1.7,3.1-3.3,4.7-4.9c0.3-0.3,0.9-0.2,1.4-0.3c0.3,0,0.8,0.1,0.8,0c0.6-2.2,3.8-2.9,3.3-5.8c0.5,0.1,0.6,0.1,0.6,0.2
+              c0.4,0.5,0.7,1,1.1,1.5c0.4-0.7,1-1.4,1-2.1c0.1-1.1,0.9-2.3,2-2.8c1.1-0.5,2-1.4,3.1-1.7c0.9-0.2,2.1,0.2,3.1,0.4
+              c0.2,0,0.3,0.2,0.5,0.3c2.9-2.1,5.7-1.6,8.5,0.2c0.6-1.2,1.7-2.3,1.7-3.3c0-1.2,1.4-1,1.3-2.1c0-1.2,0.7-2.4,1.1-3.7
+              c1.3,0.6,2-0.5,2.8-1.5c0.1-0.1,0.3-0.3,0.3-0.3c-0.8-2.2,1.9-3.2,1.8-5.1c1.2-0.3,1.6-1.1,1.5-2.3c1.5,0.2,1.9-0.3,2-2.2
+              c0-0.8,1-2.5,1.4-3.2c0.3-0.6,0.2-1.4,0.3-2.1c1.4-0.1,2.9,0,4.3-0.4c0.5-0.1,0.7-1.2,1.2-2C71,3.2,72.2,4,73,2.6
+              c0.2-0.3,1.5-0.1,2.5-0.1c0-0.7,0-1.4,0-2.1c0.8,0,1.4,0.1,2,0.1c0.1-0.2,0.1-0.3,0.2-0.5c0.7,0.8,1.4,1.6,2.2,2.3
+              C80.6,3,81.4,3.5,82.1,4c0.5,0.8,0.9,1.5,1.3,2.2c0.4,0.6,1,1.2,1.2,1.9c0.5,1.8,2,2.7,3.2,4c0.1,0.1,0.3,0.3,0.4,0.5
+              c0.5,2.4,2.4,3.9,3.7,5.8c0.2,0.2,0.3,0.5,0.3,0.8c-0.2,1.8,1.4,2.6,2.1,3.9c0.3,0.5,0.5,1,0.8,1.5c0.2,0.4,0.4,0.9,0.5,1.3
+              c0.2,0.5,0.5,0.9,0.4,1.4c-0.1,1.3,0.4,1.5,1.7,1.1c0,0.8-0.1,1.6,0,2.3c0.3,1.3,0.9,2.4,2.2,3.1c0.2,0.1,0.5,0.4,0.5,0.7
+              c0.2,0.9,0.7,0.9,1.3,0.6c0.4-0.2,1-0.4,1.4-0.3c2.2,0.5,4.4,0.8,6.7,0.8c3.8,0,3.8,0.3,6.8,3.7c0.3-0.2,0.7-0.5,0.9-0.6
+              c0.3,0.3,0.6,0.6,0.9,0.9c1.2,1.6,2.9,2.2,4.5,3.2c1.3,0.8,2.6,2,4,2.7c0.2,0.1,0.5,0.3,0.7,0.2c1.3-0.5,1.9,0.5,2.5,1.2
+              c1.4,1.4,3,2.1,5,1.7c0.2,0,0.4,0,0.4,0.3c0.8,0.7,1.5,1.3,2.3,1.9c0.8,0.7,1.6,4.2,1.2,5.2c-0.3,0.7-0.6,1.4-0.7,2.2
+              c-0.3,2.4-1.9,3.8-3.8,5c-0.2,0.1-0.5,0.1-0.7,0.1c-1-0.2-1.9-0.5-2.8-0.7c-0.9-1.6-1.8-3.3-2.6-4.8c-3-1.6-6.1-2.3-9.4-1.4
+              c-1.6-2.7-3.4-5.1-5.9-7.1c-0.9-0.7-1.8-1.4-3.1-0.9c-0.6,0.2-1.3-0.1-1.9-0.1c-0.3,2.3,0.2,3.3,1.9,3.9c0.1-0.5,0.2-1.1,0.2-1.5
+              c0.4,0.9,1.2,1.8,1.4,2.8s-0.2,2.2,0,3c1,0.9,1.9,1.9,3,2.9c-0.6,0.9-0.5,1.6,0.5,2c0.3,0.1,0.6,0.4,0.7,0.7
+              c0.2,1.1,0.7,1.4,1.8,1.1c0.2-0.1,1,0.7,1,1c-0.1,1.2,0.2,2.4,0.7,3.5c0.7,1.6,1.8,2.8,1.8,4.8c0,1.1,1.6,2.1,2.1,2.7
+              c-0.2,1.2-0.4,2.2-0.6,3.3c1.7,0,2.2,1,2.6,2.2c0.4,1.3,1.4,2.3,2,3.6c0.6,1.5,1,3.1,1.4,4.6c0.7,0.5,1.6,0.8,2.1,1.5
+              c0.4,0.7,0.1,1.8,0.4,2.7c0.8,2-0.3,4.3,1.1,6.1c0.6,0.7,1.3,1.3,2,2c-0.1,0.1-0.2,0.2-0.2,0.4c-0.5-0.1-0.9-0.1-1.3-0.1
+              c-0.4,0.8-1,1.7-1.1,2.5c-0.1,0.9,0.3,1.7,1.5,1.5c0.1-1,0.3-2,0.4-3.2c0.8,0.3,1.6,0,2.4,0.9c0.6,0.7,0.7,1.2,0.4,1.9
+              s-0.1,1.2,0.7,1.3c1.6,0.1,1.8,1.6,2.3,2.6c0.4,0.9,0.1,2.1,0.3,3.2c0.1,0.7,0.6,1.4,1,2c0.3,0.7,0.7,1.3,0.8,2
+              c0.4,1.9,0,3.9,1.4,5.5c0.3,0.3,0.3,0.8,0.4,1.3c0.2,2.1,0.3,4.2,0.5,6.3c0,0.1,0,0.3,0.1,0.4c1.6,2,0.2,3.8-0.2,5.5
+              c-0.7,0.1-1.2,0.2-1.8,0.1c-0.7,0-1.5-0.2-2.2-0.3c-0.4-0.1-0.9-0.3-1.3-0.5c-0.9-0.4-2-0.6-2.6-1.3c-1.1-1.2-2-2.7-2.9-4.1
+              c-0.4-0.8-0.6-1.7-0.9-2.5c-0.3-0.7-0.9-1.4-1.2-2.1c-0.6-1.2-1.3-2.5-1.8-3.8c-0.8-1.9-1.3-3.9-2.2-5.6c-0.8-1.4-1.3-3.3-3.5-3.3
+              c0.1-0.9,0.4-1.9,0.1-2.6c-0.7-1.9-1.6-3.8-2.6-5.6c-0.4-0.7-1.4-1-2.1-1.4c0.1-0.9,0.1-1.7,0.2-2.6c-0.5,0.2-0.9,0.3-0.8,0.3
+              c-0.7-1.8-1.4-3.6-1.9-5.4c-0.3-0.8-0.4-1.8-0.2-2.5c0.4-1.4-0.1-2.3-1.6-2.4c-0.4,0-0.7,0-1.1,0c-0.3,0-0.7,0-1.2,0
+              c0.7-0.7,1.3-1.4,2.1-2.2c-1.2-0.3-2.1-0.6-3.4-0.9c0.7-0.2,1.1-0.3,1.2-0.5c0.2-0.4,0.2-1.2,0.1-1.2c-1.6-0.5-1.5-2.2-2.4-3.2
+              c-0.2-0.3-0.3-0.8-0.5-0.9c-1.5-0.4-1.5-1.8-2-2.8c-1.4-2.6-2.8-5.1-4.1-7.3c-0.4-1.1-0.7-2-1.1-2.8c-0.6-1.4-2-2.4-2-4.1
+              c0-0.3-0.7-0.5-0.9-0.8c-0.5-0.9-0.8-2-1.2-2.9c-0.1-0.2-0.1-0.4-0.2-0.6c-2.4-2.8-2.6-3.2-3.1-5.5c-0.3,0.1-0.5,0.2-0.7,0.3
+              c-0.2-0.6-0.4-1.3-0.6-1.9c-0.1-0.2-0.2-0.4-0.4-0.7C92.4,51.6,92,51.8,91.6,52.1c-0.2-0.9,0.8-2.5-1.2-2.4c0.1,0.6,0.2,1.2,0.4,1.7
+              C90.9,51.7,91.3,51.9,91.6,52.1z M82.3,41.6c1,0.4,1.9,1.2,2.6-0.2c0.3-0.6-0.5-5.1-1-5.6c-1.3-1.2-2.5-2.4-3.8-3.7
+              c-0.2-0.2-0.3-0.5-0.2-0.7c0.4-1.6-0.3-2.8-1.6-3.6c1.2-1.3,1.3-2,0.3-3c-0.9-0.9-1.7-1.8-2.5-2.7c-0.2-0.3-0.2-0.9-0.1-1.2
+              c0.3-0.5,0.8-0.9,1.2-1.4c-0.1-0.1-0.2-0.3-0.3-0.4c-0.6,0-1.1,0-1.7,0.1c-0.4,0.1-0.8,0.3-1.3,0.5c-0.3,0.1-0.8,0.2-1,0.5
+              c-0.4,0.7-0.4,1.6-0.8,2.2c-0.7,1.3-1.6,2.5-2.4,3.8c-0.1,0.2-0.4,0.4-0.5,0.7c-0.6,1.7-1.1,3.3-1.7,5c-0.1,0.3-0.4,0.5-0.4,0.5
+              c-0.9-0.3-1.6-0.4-1.9-0.5c-0.4,1.4-0.4,2.7-1.1,3.4c-1.1,1.3-1.8,2.7-2,4.3c-0.2,1.6,0.3,2,1.8,2.1c0.7,0,1.6,0.3,1.9,0.8
+              c1.2,1.6,3.6,0.6,4.7,2.3h0.1c1.1,0.1,2.1,0.2,3.2,0.3c0.9-1.9,2-1.4,3.4,0.5c0.6-0.4,1.2-0.8,1.8-1.2c0.4-0.2,0.7-0.8,1-0.7
+              C81.7,43.8,82,42.8,82.3,41.6z M133.3,112.3c0,0.5-0.1,0.8-0.1,0.9c0.7,0.9,1.3,1.7,0.8,3c0,0.1,0.2,0.5,0.4,0.5
+              c0.3,0,0.7-0.1,0.8-0.3c0.2-0.4,0.4-1.1,0.2-1.4C134.9,114.2,134.1,113.4,133.3,112.3z"/>
+              <path d="M82.4,67.2c0.1,0.9,0.1,1.5,0.2,2.3c0.8-0.3,1.3-0.5,2-0.7c0,0.6,0,1.2,0,2.1c1-1,2.3,1.1,3-1.1c0.6,1,1,1.8,1.5,2.4
+              c0.3,0.3,0.7,0.5,1.1,0.8c0.3,0.2,0.6,0.4,0.9,0.6c0.4,0.3,0.8,0.6,1.1,1c0.6,0.8,1.1,1.6,1.5,2.4c0.6,1.3,1.2,2.6,1.7,3.9
+              c0.2,0.4,0.2,0.9,0.2,1.3c-0.1,0.7-0.3,1.3-0.5,2.2c0,0-0.4,0.1-0.7,0.2c-0.8,2-0.8,2-1.9,2.1c-1,1.7-1.7,3.6-0.9,5.6
+              c-0.5,0.3-1,0.5-1.7,0.9c1.3,1.4-1.1,4.6,2.7,4.8c-0.5,0.5-0.9,1-1.5,1.7c-0.2-0.5-0.4-1.2-0.7-1.4c-0.4-0.3-1-0.1-1.6-0.2
+              c-0.1,1.4-0.4,2.7,1.1,3.2c0.8,0.3,1.5,1.5,2.3-0.1c1.2,1.5,2.8,2.4,3.1,4.4c0.1,0.8,1.1,1.1,1.8,0.3c0.4,0.9,1.1,1.8,1.3,2.8
+              c0.4,1.6,0.5,3.3,0.6,5c0,0.4-0.6,0.9-1,1.2c-0.7,0.6-1.2,1.1-0.8,2.1c0.2,0.5,0,1.6-0.4,1.7c-1.5,0.7-1.3,1.8-1,3.1
+              c-0.1,0.1-0.3,0.1-0.4,0.2c-0.3-0.5-0.7-1-1.1-1.6c-0.9,1.2-2.5-0.6-3.8,1c-0.7,1-2.4,1.2-3.8,1.8c0,0.4,0.2,0.7,0.1,1
+              s-0.3,0.7-0.5,0.7c-0.3,0.1-0.9-0.1-1-0.3c-0.5-1.1-1-0.7-1.9-0.4c-1.2,0.4-2.3,0.8-3.1,1.9c-0.1,0.1-0.5,0-0.7,0
+              c-1.4,0-2.9,0-4.3,0.1c-0.3,0-0.5,0.2-0.7,0.4c-0.5,0.3-0.9,0.7-1.4,1c-0.6,0.3-1.3,0.6-2.3,1c-0.1-0.1-0.5-0.4-0.9-0.7
+              c-0.1,0-0.2,0.1-0.4,0.1c0.4,1.3,0.7,2.7,1.1,4.1c-0.2-0.1-0.4-0.1-0.4-0.2c-0.5-0.8-0.8-2.1-1.4-2.3c-1.5-0.4-3.2-0.5-4.6,0.4
+              c-0.3,0.2-0.7,0.3-1.2,0.6c-0.2-1.1-0.6-1.8-1.9-1.6c-0.5,0.1-1.1-0.7-1.8-1.1c-0.2,0.8-0.3,1.3-0.4,1.5c-0.9-0.3-1.5-0.5-2.2-0.8
+              c-0.5-0.2-1.2-0.5-1.5-0.9c-0.6-0.9-1.2-2-1.4-3c-0.1-0.5,0.7-1.1,1.1-1.7c-0.4-0.8-0.7-1.6-1.1-2.5c0.5-0.2,0.9-0.3,1.2-0.5
+              c0.7-0.6,1.2-1.3,0.4-2.1c-0.9-0.9-0.7-1.7-0.5-2.8c0.1-0.9,0.1-2.1-0.3-2.8c-0.9-1.4-0.8-2.6-0.7-4.1c0.2-2,0.2-3.9,0.3-5.9
+              c0-0.6,0.2-1.3,0.3-1.9c-0.6-0.6-1.3-1.2-2.1-1.9c2.5-0.6,2.6-0.6,2.3-2.8c-0.1-0.7-0.4-1.5,0.7-1.8c0.2-0.1,0.2-1.1,0.1-1.6
+              c-0.9-2.4-2-4.7-1.4-7.4c0.4-1.9,0.4-3.8,0.6-5.7c0-0.2,0-0.5-0.1-0.7c-0.8-1.2-0.3-2.5-0.4-3.8c0-0.3,0.5-0.7,0.7-0.9
+              c0-1-0.2-2,0.2-2.6c0.5-0.7,1.5-1.3,2.4-1.3c1.8-0.1,2.5-1.1,2.9-2.5c0-0.1,0.1-0.3,0.2-0.4s0.1-0.1,0.2-0.2c1.1,2,1.1,2,5.4,0.2
+              c1.2,2.1,2.3,2.3,4.2,0.6c0,0.7,0.1,1.4,0.1,1.8c1.4,0.1,2.6,0.3,3.8,0.3c1.4,0,2.9-0.1,4.3-0.2c0.1,0,0.3-0.2,0.4-0.1
+              c1.8,1.1,1.9-0.2,2.2-1.4C81.4,67.3,82,67.3,82.4,67.2z M68,117.3c0.9-0.2,1.5-0.3,2.1-0.4c0.9-0.1,1.8-0.1,2.7-0.1
+              c0.7,0,1.7,0.2,2.2-0.2c0.8-0.8,1.7-0.8,2.6-0.8c1.4-0.1,2.7-0.2,4-0.5s2-1.1,2-2.6c0-0.6,0.4-1.6,0.8-1.7c1.4-0.3,1.5-1.1,1.4-2.1
+              c-0.6-0.4-1-0.9-1.5-1.1c-0.5-0.2-1.1,0-1.7,0c0-0.7,0.1-1.4,0.1-1.8c-1.8,0.5-3.3,0.9-5,1.3c-0.2-0.8-0.4-1.5-0.6-2.3
+              c-0.7,0-1.7,0.3-2.3-0.1c-1.5-0.9-2.6-0.4-3.8,0.8c-0.1-0.6-0.2-1-0.2-1.2c-0.6-0.2-1-0.5-1.5-0.6s-1.1-0.3-1.6-0.2
+              c-0.8,0-1.6,0.4-2.3,0.3c-2.2-0.4-4.1,0.2-5.7,1.5c-0.2,0.2-0.3,0.8-0.2,0.9c1,0.7,2,1.6,3.1,2c1.3,0.4,1.8,1.2,1.2,2.5
+              c-0.5,1.1-1.1,2.2-1.7,3.3c-0.4-0.4-0.8-0.8-1.3-1.1c-0.1,0.7-0.1,1.3-0.2,2.2c-0.1,0.1-0.5,0.4-0.9,0.7c0.4,0.4,0.8,0.7,0.9,1.1
+              c0.6,1.6,1.5,0.9,2.5,0.5c0.8-0.3,1.7-0.8,2.4-0.7c1.7,0.3,2.1-0.6,2.3-1.9c0-0.2,0.1-0.4,0.2-0.7c0.1,0,0.2,0,0.2,0
+              C68.3,115.1,68.2,116,68,117.3z M64.9,85.9c-2.9-0.8-3.2-0.8-3.7,1c-0.2,0.6-0.4,1.6-0.1,1.9c0.6,0.5,1.5,0.6,2.3,0.9
+              c-0.2,0.8-0.5,1.7-0.9,2.9c1.3-0.7,2.3-1.3,3.4-1.8c1.8,1.7,2.6-0.5,3.9-1.4c0.1,0.7,0.1,1.3,0.2,1.9c0.6-0.5,1.1-0.9,1.7-1.4
+              c0.2,0.7,0.3,1.1,0.4,1.6c0.3-0.2,0.6-0.2,0.7-0.4c0.2-0.2,0.3-0.5,0.5-0.7c1,0.9,1.5,0.9,2.2,0c0.2-0.3,0.5-0.6,0.9-0.7
+              c1.5-0.3,3-0.6,4.5-0.8c0.5-0.1,1.2,0,1.6,0.2c1,0.7,1.4,0.1,2-0.5c0.5-0.5,1.1-0.9,1.5-1.4c0.3-0.5,0.7-1.2,0.6-1.7
+              c-0.1-0.7-0.7-1.3-1-1.7c-1.2,0.3-2.4,0.6-4,0.9c0.4-1,0.5-1.5,0.7-2c-2-1.2-3.1-1.1-4.4,0.5c0-0.6-0.1-1.2-0.1-1.9
+              c-0.4-0.3-0.9-0.9-1.3-0.9c-2.2,0-4.2-0.2-6.3-0.9c-1.6-0.6-3.6-0.1-5.4-0.1c-0.1,0.2-0.2,0.5-0.3,0.7c0.5,0.5,0.9,1,1.5,1.6
+              c-0.3,0.2-0.6,0.4-1,0.6C64.9,83.6,64.9,84.7,64.9,85.9z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="menu-icon" id="menuIcon">☰</div>
+      </div>
+      <div class="sections">
+        <div class="sections-menu">
+          <a href="index.html">Accueil</a>
+          <span>|</span>
+          <a href="apropos.html">Atelier</a>
+          <span>|</span>
+          <a href="#section-savoirfaire" class="active">Savoir-faire</a>
+        </div>
+      </div>
+      <ul class="menu" id="menu">
+        <li class="tab"><a href="index.html">Accueil</a></li>
+        <li class="tab selected"><a href="#">Savoir-faire</a></li>
+        <li class="tab"><a href="apropos.html">Atelier</a></li>
+        <li class="tab"><a href="apropos.html#section-contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="gallery">
+      <!-- Boutons radio pour chaque image -->
+      <input type="radio" id="img1" name="gallery" checked>
+      <input type="radio" id="img2" name="gallery">
+      <input type="radio" id="img3" name="gallery">
+      <input type="radio" id="img4" name="gallery">
+      <input type="radio" id="img5" name="gallery">
+      <input type="radio" id="img6" name="gallery">
+      <!-- Contenu des images -->
+      <div class="slides">
+        <!-- Image 1 -->
+        <div class="slide slide1">
+          <label for="img2">
+            <img src="https://live.staticflickr.com/65535/53344195381_f371e5117b_h.jpg" style="filter: opacity(0.0);" alt="Image 1">
+            <div class="overlay" style="color: #8d5219;">
+              <h2>SAVOIR-FAIRE</h2>
+              <p>L'Atelier participe aux projets de différentes manières pour répondre aux demandes en matière de rénovation et construction écologique.</p>
+              <p>Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+            </div> <!-- Texte associé à l'image 1 -->
+          </label>
+        </div>
+        <!-- Image 2 -->
+        <div class="slide slide2">
+          <label for="img3">
+            <img src="https://live.staticflickr.com/65535/53344195381_f371e5117b_h.jpg" alt="Image 2">
+            <div class="overlay">
+              <h2>TERRE</h2>
+            </div> <!-- Texte associé à l'image 2 -->
+          </label>
+        </div>
+         <!-- Image 3 -->
+        <div class="slide slide3">
+          <label for="img4">
+            <img src="https://live.staticflickr.com/65535/52171444877_650c33f0dc_o.jpg" alt="Image 3">
+            <div class="overlay">
+              <h2>PAILLE</h2>
+            </div> <!-- Texte associé à l'image 3 -->
+          </label>
+        </div>
+        <!-- Image 4 -->
+        <div class="slide slide4">
+          <label for="img5">
+            <img src="https://live.staticflickr.com/65535/53693227191_ee8a5cef14_c.jpg" alt="Image 4">
+            <div class="overlay">
+              <h2>TERRE-CHANVRE</h2>
+            </div> <!-- Texte associé à l'image 4 -->
+          </label>
+        </div>
+        <!-- Image 5 -->
+        <div class="slide slide5">
+          <label for="img6">
+            <img src="https://live.staticflickr.com/65535/53694049083_b33c8f8913_c.jpg" alt="Image 5">
+            <div class="overlay">
+              <h2>BTC</h2>
+            </div> <!-- Texte associé à l'image 5 -->
+          </label>
+        </div>
+        <!-- Image 6 -->
+        <div class="slide slide6">
+          <label for="img1">
+            <img src="https://live.staticflickr.com/65535/53693443553_fde0de4cb1_c.jpg" alt="Image 6">
+            <div class="overlay">
+              <h2>OUATE DE CELLULOSE</h2>
+            </div> <!-- Texte associé à l'image 6 -->
+          </label>
+        </div>
+      </div>
+      <!-- Indicateurs de navigation -->
+      <div class="indicators">
+        <label for="img1" class="indicator indicator1"><div class="down"><div><b>1/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+        <label for="img2" class="indicator indicator2"><div class="down"><div><b>2/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+        <label for="img3" class="indicator indicator3"><div class="down"><div><b>3/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+        <label for="img4" class="indicator indicator4"><div class="down"><div><b>4/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+        <label for="img5" class="indicator indicator5"><div class="down"><div><b>5/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+        <label for="img6" class="indicator indicator6"><div class="down"><div><b>6/6</b></div><div><span id="mentions">Mentions légales</span> | Atelier Barœul 2024</div></div></label>
+      </div>
+    </div>
+  </body>
+  <script>
+    function changeColor() {
+      var scroll = document.documentElement;
+      if (scroll.scrollTop < document.getElementById("section-equipe").offsetTop) {
+        document.getElementsByClassName("sections-menu")[0].children[0].style.borderBottom = "1px solid #000";
+      } else {
+        document.getElementsByClassName("sections-menu")[0].children[0].style.borderBottom = "1px solid #fff";
+      }
+      if (scroll.scrollTop >= document.getElementById("section-equipe").offsetTop && scroll.scrollTop < document.getElementById("section-contact").offsetTop) {
+        document.getElementsByClassName("sections-menu")[0].children[1].style.borderBottom = "1px solid #000";
+      } else {
+        document.getElementsByClassName("sections-menu")[0].children[1].style.borderBottom = "1px solid #fff";
+      }
+      if (scroll.scrollTop >= document.getElementById("section-contact").offsetTop) {
+        document.getElementsByClassName("sections-menu")[0].children[2].style.borderBottom = "1px solid #000";
+      } else {
+        document.getElementsByClassName("sections-menu")[0].children[2].style.borderBottom = "1px solid #fff";
+      }
+    }
 
-header {width: 100%;}
+    window.addEventListener('load', function(event) {
+      document.getElementsByTagName('body')[0].style.opacity = "100%";
+    });
+    window.addEventListener('beforeunload', function(event) {
+      document.getElementsByTagName('body')[0].style.opacity = "0%";
+    });
+    window.onbeforeunload = function () {
+      document.getElementsByTagName('body')[0].style.opacity = "0%";
+    }
 
-.parallax {height: 100vh; perspective: 10px; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth;}
+    var menuIcon = document.getElementById('menuIcon');
+    var menu = document.getElementById('menu');
 
-.grid-container {display: flex; align-items: center; flex-direction: column; row-gap: 20px; position: absolute; top: 30%; left: 0; right: 0; /*-ms-transform: translateY(-50%) translateZ(1px); transform: translateY(-50%) translateZ(1px)*/; width: 400px; margin: 0 auto; color: white;}
-.item1 {width: 100px; margin: 0 auto;}
-.item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px;}
-.item2 div:first-child {font-size: 20px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
-.item2 div:last-child {display: none;}
-.head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08); background-color: white; z-index: 999; position: relative;}
-.head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
-.head-page .menu-icon {display: none;}
-.menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
-.selected {color: white; background-color: #8d5219; padding: 0 4px; border-radius: 1px; /* Couleur de l'onglet sélectionné */}
-.home-page {display: block; margin: 0 auto; width: 55px;}
-svg {fill: #8d5219;}
+    menuIcon.addEventListener('click', () => {
+      if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex';
+        menuIcon.textContent = '✕';
+        menuIcon.style.fontWeight = '600';
+        // On attend que le display soit pris en compte avant de changer la hauteur
+        setTimeout(() => {
+          menu.style.height = '95px';
+        }, 10);
+      } else {
+        menu.style.height = '0px';
+        menuIcon.textContent = '☰';
+        menuIcon.style.fontWeight = '300';
+        // On attend que la hauteur atteigne 0 avant de cacher le menu
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 200);
+      }
+    });
 
-.scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
-.scroll-icon-container:hover {height: 32px;}
-.scroll-icon-container a {display: block; height: 25px;}
-.scroll-icon-container span {height: 25px; font-size: 30px;}
+    // Fonction pour vérifier et basculer le menu selon le scroll sur le body
+    function toggleMenuOnScroll() {
+      const menu = document.getElementById('menu');
+      const body = document.body;  // Récupère l'élément body
+      
+      // Vérifier si le menu existe
+      if (!menu) return;
 
-#flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
-#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 46%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
-#flex-container .bio span {text-transform: uppercase;}
-#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px; text-align: center;}
-.btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
-.btn-separator {font-size: 1.5rem; line-height: 21px;}
-.menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit';}
-.menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid black; text-align: center; transition: width .3s ease;}
-.btn-page-ab .menu-link:hover > span {width: 100%;}
-.btn-page-sf .menu-link:hover > span {width: 100%;}
+      // Suivi du scroll sur le body
+      body.addEventListener('scroll', function() {
+        // Vérifier la position du scroll sur le body
+        if (body.scrollTop > 10) {
+          // Vérifier si le menu est en display: flex
+          if (menu.style.display === 'flex' || window.getComputedStyle(menu).display === 'flex') {
+            menu.style.height = '0px';
+            menuIcon.textContent = '☰';
+            menuIcon.style.fontWeight = '300';
+            // On attend que la hauteur atteigne 0 avant de cacher le menu
+            setTimeout(() => {
+              menu.style.display = 'none'; // Cacher le menu si il est en display: flex
+            }, 200);
+          }
+        }
+      });
+    }
 
-/* Savoir-faire ----------------------------------------------- */
+    // Appel de la fonction pour activer la logique
+    toggleMenuOnScroll();
 
-.savoir {padding: 10px 30px 0; width: 100%; position: absolute; display: flex; flex-direction: column; text-align: center;}
-.table2 {display: none; padding: 0px 5rem; column-gap: 25px;}
-.flex-content2 {position: relative; bottom: 0; color: white;}
-.row {display: flex; gap: 10px;}
-#savoir-img {display: block; background-repeat: no-repeat; max-width: 100%; background-color: antiquewhite;}
-.tech {display: flex; justify-content: space-evenly;}
-#medal {display: block; width: 10rem; height: 10rem;}
+    var cvContainer = document.getElementById('cv-container');
+    var cvIcon = document.getElementById('cvIcon');
+    var cvContent = document.getElementById('cv-content');
 
-.savoir-container {margin: auto;}
-.savoir-container ul {list-style: none; margin: 0; padding: 0; position: relative; height: 100vh;}
-.savoir-container ul li {position: absolute;}
-
-/* Footer ----------------------------------------------- */
-
-footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
-#scroll {display: none; fill: white; width: 2rem; margin-left: 2rem;}
-
-svg, text {transition: all 0.5s ease;}
-.white {fill: white;}
-.sections {top: 0; z-index: 10; display: flex; padding: 0.8rem 0; font-family: 'Outfit'; letter-spacing: 0.4px;}
-.sections a {display: inline-flex; align-items: center; font-family: 'Outfit'; font-size: 16px; font-weight: 500; text-transform: uppercase; border-bottom:1px solid #fff; transition: all .3s ease;}
-.sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}
-.active, .active::after, .selected::after {content: "\00A0\2193";}
-.back {text-transform: uppercase;}
-#rge {display: none;}
-#mentions {text-decoration: underline;}
-
-.anchors ul li {display: inline-block; margin: 0px !important; line-height: 25px; list-style-type: none;}
-.anchors ul li::after {content: ''; display: block; position: relative; top: 0px; left: 0px; width: 0%; height: 1px; background: rgba(0, 0, 0, 1); transition: width 0.5s;}
-
-.img-container {transform: translateZ(-2px) scale(1.2); margin: auto;}
-.img-container ul {list-style: none; margin: 0; padding: 0; position: relative; height: 100vh;}
-.img-container ul li {position: absolute;}
-.img-container ul li:nth-child(5) {animation: xfade 20s 0s infinite;}
-.img-container ul li:nth-child(4) {animation: xfade 20s 4s infinite;}
-.img-container ul li:nth-child(3) {animation: xfade 20s 8s infinite;}
-.img-container ul li:nth-child(2) {animation: xfade 20s 12s infinite;}
-.img-container ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
-@keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
-
-.item3 ul {margin: 20px 0 0; padding: 0; text-align: center; list-style: none;}
-.item3 ul li {margin-top: 10px;}
-.item3 ul li:nth-child(1) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 0.5s ease-out forwards;}
-.item3 ul li:nth-child(2) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1s ease-out forwards;}
-.item3 ul li:nth-child(3) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1.5s ease-out forwards;}
-@keyframes fadeIn {0% {opacity: 0; padding-top: 20px;} 100% {opacity: 1; padding-top: 0px;}}
-
-.table {display: grid; grid-template-columns: 1.3fr 1fr; padding: 0px 5rem; column-gap: 50px;}
-.flex-content {position: relative; padding-top: 25px; grid-column: 1 / 1;}
-.flex-content:first-child {grid-column: 1 / 1; grid-row: 1 / 4;}
-.flex-content:last-child {grid-column: 2; grid-row: 1;}
-.separator, #section-cv {display: none;}
-.flex-content.image {display: none; width: 100%; transform: translateY(0vh) translateZ(-1px) scale(1.1); text-align: center;}
-.contact-container {display: none; position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh); text-align: center;}
-.contact-content {margin: 0 auto; padding: 4rem; width: 25rem; color: white;}
-.contact {position: sticky; top: 0px;}
-#cv-container {display: flex; flex-direction: row; align-items: baseline;}
-#cv-content {display: none; padding-top: 30px; /*Crée un problème sur la transition*/ height: 0px; overflow: hidden; transition: all .2s ease;}
-.btn-page-home {width: 80px;}
-.btn-page-up {width: 60px;}
-.btn-page-home .menu-link:hover > span {width: 80px;}
-.btn-page-up .menu-link:hover > span {width: 60px;}
-.cv {display: grid; width: 100%; padding-bottom: 1rem; grid-template-columns: 30px 0px 1fr;}
-.lieu {padding-left: 1rem;}
-.ashtray {background-color: black;}
-
-.image, .image2 {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
-.image3 {width: 72vw; height: 72vw; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9);}
-.text {display: none; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
-
-/* Carrousel -------------------------------------------*/
-
-.gallery {position: relative; overflow: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;}
-/* Cacher les boutons radio */
-.gallery input[type="radio"] {display: none;}
-/* Conteneur des images */
-.gallery .slides {display: flex; transition: transform 0.5s ease-in-out;}
-.gallery img {width: 100%; height: calc(100vh - 66px); object-fit: cover; cursor: pointer;}
-/* Cacher les images par défaut */
-.gallery .slide {display: none; position: relative; scroll-snap-align: start;}
-/* Afficher l'image active */
-.gallery input#img1:checked ~ .slides .slide1,
-.gallery input#img2:checked ~ .slides .slide2,
-.gallery input#img3:checked ~ .slides .slide3,
-.gallery input#img4:checked ~ .slides .slide4,
-.gallery input#img5:checked ~ .slides .slide5,
-.gallery input#img6:checked ~ .slides .slide6 {display: block;}
-/* Overlay avec le texte */
-.gallery .slide .overlay {position: absolute; color: white; top: 0; left: 0; padding: 15px;}
-/* Indicateurs en forme de points */
-.gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 13px; color: transparent;}
-.gallery .indicator {cursor: pointer; transition: color 0.0s;}
-.gallery input#img1:checked ~ .indicators .indicator1 {color: #8d5219; position: absolute;}
-.gallery input#img2:checked ~ .indicators .indicator2,
-.gallery input#img3:checked ~ .indicators .indicator3,
-.gallery input#img4:checked ~ .indicators .indicator4,
-.gallery input#img5:checked ~ .indicators .indicator5,
-.gallery input#img6:checked ~ .indicators .indicator6 {color: white; position: absolute;}
-.gallery .down {display: flex; width: 100vw; padding: 0 15px; justify-content: space-between;}
-
-/* Mobile ----------------------------------------------- */
-
-@media screen and (max-width: 768px) {
-  body {color: #8d5219; transition: all .5s ease;}
-  a:hover {color: black;}
-
-  .head-page {padding: 15px 15px 8px; justify-content: space-between;}
-  .home-page {width: 40px;}
-  .head-page .menu-icon {display: block; font-size: 27px;}
-  .menu {flex-direction: column; justify-content: space-between; align-items: end; row-gap: 5px; overflow: hidden; margin-bottom: 5px; font-family: 'Outfit'; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
-    
-  .grid-container {width: 100%;}
-  .item1 {width: 100px; outline: auto; outline-offset: 8px;}
-  .item2 {align-items: center; flex-direction: column; font-size: 17px;}
-  .item2 div:last-child::before {content: none;}
-
-  .image {background-attachment: scroll;}
-  .image2 {border: 10px solid white;}
-
-  .sections {display: none;}  
-  .sections >:not(:last-child) {display: none;}
-
-  #flex-container .bio {width: 60%; text-align: center;}
-  #flex-container .bio h2 {display: none;}
-  .btn-container {margin-top: 30px;}
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 13px;}
-
-  .table {display: block; padding: 0;}
-  .flex-content {padding: 20px 15px 0;}
-  .table2 {display: none; padding: 0;}
-  .flex-content2 {width: 100vw;}
-  .tech {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
-  #medal {display: block; width: 100%; height: auto;}
-  .separator {display: none; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
-  .flex-content.image {margin-top: 70px;}
-  .text {display: none;}
-  .contact-content {width: 17rem; padding: 4rem 2rem;}
-  .contact-container .btn-container {margin-top: 0px;}
-  .contact {height: 100vh;}
-  /*.contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}*/
-
-  #scroll {display: none;}
-  .scroll-icon-container {display: none;}
-
-  .menu-link span {display: none;}
-  .menu-link {padding-block-end: 10px; border-bottom: 1px solid #8d5219; width: min-content;}
-
-  .savoir-container {display: none; position: absolute; top: 0;}
-  #toerana {position: absolute; left: 10px; bottom: 6px;}
-
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-direction: column; flex-wrap: wrap; width: max-content; margin: auto; justify-content: space-around; gap: 15px; padding: 15px;}
-}
+    cvContainer.addEventListener('click', () => {
+      if (cvContent.style.display === 'none' || cvContent.style.display === '') {
+        cvContent.style.display = 'block';
+        cvIcon.textContent = '✕';
+        cvIcon.style.fontWeight = '600';
+        // On attend que le display soit pris en compte avant de changer la hauteur
+        setTimeout(() => {
+          cvContent.style.height = 'auto';
+        }, 10);
+      } else {
+        cvContent.style.height = '0px';
+        cvIcon.textContent = '↓';
+        cvIcon.style.fontWeight = '300';
+        // On attend que la hauteur atteigne 0 avant de cacher le cvContent
+        setTimeout(() => {
+          cvContent.style.display = 'none';
+        }, 300);
+      }
+    });
+  </script>
+</html>
