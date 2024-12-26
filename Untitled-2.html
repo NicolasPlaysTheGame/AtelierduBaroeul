@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Images Swipe</title>
+    <style>
+        /* Style global */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Conteneur principal de la galerie */
+        .gallery {
+            width: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory; /* Permet d'appliquer le "snap" sur le défilement horizontal */
+            -webkit-overflow-scrolling: touch; /* Améliore le défilement sur les appareils tactiles */
+            position: relative;
+        }
+
+        /* Piste contenant les éléments */
+        .gallery-track {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        /* Chaque image de la galerie */
+        .gallery-item {
+            min-width: 100%; /* Chaque image prend toute la largeur du conteneur */
+            flex-shrink: 0; /* Empêche la réduction des images */
+            scroll-snap-align: start; /* Aligne chaque image au début de la zone visible */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto; /* Conserve le ratio de l'image */
+            display: block;
+        }
+
+        /* Style pour ajouter un léger ombrage au bas de l'image */
+        .gallery-item img {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajout de quelques marges et espaces autour de l'image */
+        .gallery {
+            margin: 10px 0;
+            padding-bottom: 10px;
+        }
+
+        /* Optionnel : style pour les images sur le survol (pour les ordinateurs, mais pas utilisé sur les mobiles) */
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Ajout d'un fond de couleur sur la page pour un meilleur contraste */
+        .container {
+            background-color: #ffffff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center;">Galerie d'Images</h1>
+
+    <!-- Galerie d'images -->
+    <div class="gallery">
+        <div class="gallery-track">
+            <div class="gallery-item"><img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/800x400?text=Image+4" alt="Image 4"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
