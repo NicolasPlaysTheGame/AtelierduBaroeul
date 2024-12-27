@@ -140,6 +140,8 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img6:checked ~ .slides .slide6 {display: block;}
 /* Overlay avec le texte */
 .gallery .slide .overlay {position: absolute; color: white; top: 0; left: 0; padding: 15px;}
+.title-material {display: flex; align-items: baseline; justify-content: space-between;}
+.title-material b {font-size: 13px; width: 40px; height: 27px; line-height: 27px; text-align: center; background: #a52a2a26; border-radius: 15px; transition: opacity 1s, visibility 1s;}
 /* Indicateurs en forme de points */
 .gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 13px; color: transparent;}
 .gallery .indicator {cursor: pointer; transition: color 0.0s;}
@@ -149,7 +151,36 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img4:checked ~ .indicators .indicator4,
 .gallery input#img5:checked ~ .indicators .indicator5,
 .gallery input#img6:checked ~ .indicators .indicator6 {color: white; position: absolute;}
-.gallery .down {display: flex; width: 100vw; padding: 0 15px; justify-content: space-between;}
+.gallery .down {display: flex; width: 100vw; padding: 0 15px; justify-content: end;}
+
+.gallery .dots {position: absolute; bottom: 21px; display: flex; padding: 0 15px; gap: 10px;}
+.gallery .dot {cursor: pointer; width: 7px; height: 7px; border-radius: 50%; background-color: whitesmoke; transition: background-color 0.1s;}
+.gallery input#img1:checked ~ .dots .dot1 {background-color: #8d5219;}
+.gallery input#img2:checked ~ .dots .dot2,
+.gallery input#img3:checked ~ .dots .dot3,
+.gallery input#img4:checked ~ .dots .dot4,
+.gallery input#img5:checked ~ .dots .dot5,
+.gallery input#img6:checked ~ .dots .dot6 {background-color: chocolate;}
+
+/* Boutons de navigation */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 100%;
+  color: #8d5219;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+}
+.nav-prev {left: 0px;}
+.nav-next {right: 0px;}
+.hidden {opacity: 0;visibility: hidden;}
+.nav-button:hover {background-color: rgba(0, 0, 0, 0.8);}
 
 /* Mobile ----------------------------------------------- */
 
@@ -202,4 +233,5 @@ svg, text {transition: all 0.5s ease;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
 
   #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-direction: column; flex-wrap: wrap; width: max-content; margin: auto; justify-content: space-around; gap: 15px; padding: 15px;}
+  .nav-button {opacity: 0; visibility: hidden;}
 }
