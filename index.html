@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="index.css">
   </head>
   
-  <body class="parallax" style="opacity: 0;">
-    <main>
+  <body>
+    <main class="parallax" style="opacity: 0;">
       <div class="img-container">
         <ul>
           <li><div class="image" style="background-image: url(https://live.staticflickr.com/65535/53344195381_f371e5117b_h.jpg);"></div>
@@ -173,12 +173,7 @@
           </div>
           <div class="btn-container">
             <div class="btn-page-sf"><a class="menu-link" href="savoirfaire.html">Savoir-faire<br><span></span></a></div>
-            <div class="btn-separator">
-              <span>&</span>
-              <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                <path d="m0.41,12.649c-2.19,-7.483 4.756,-14.43 12.24,-12.239l4.579,1.342c1.81,0.53 3.734,0.53 5.544,0l4.579,-1.342c7.481,-2.19 14.429,4.756 12.238,12.24l-1.342,4.579a9.864,9.864 0 0 0 0,5.544l1.342,4.58c2.191,7.482 -4.756,14.43 -12.239,12.238l-4.578,-1.342a9.864,9.864 0 0 0 -5.546,0l-4.577,1.341c-7.484,2.19 -14.431,-4.756 -12.24,-12.24l1.342,-4.578c0.53,-1.81 0.53,-3.735 0,-5.546l-1.342,-4.576l0,-0.001z"/>
-              </svg>
-            </div>
+            <div class="btn-separator">|</div>
             <div class="btn-page-ab"><a class="menu-link" href="apropos.html">Atelier<br><span></span></a></div>
           </div>
         </div>
@@ -199,13 +194,13 @@
   </body>
   <script>
     window.addEventListener('load', function(event) {
-      document.getElementsByTagName('body')[0].style.opacity = "100%";
+      document.getElementsByTagName('main')[0].style.opacity = "100%";
     });
     window.addEventListener('beforeunload', function(event) {
-      document.getElementsByTagName('body')[0].style.opacity = "0%";
+      document.getElementsByTagName('main')[0].style.opacity = "0%";
     });
     window.onbeforeunload = function () {
-      document.getElementsByTagName('body')[0].style.opacity = "0%";
+      document.getElementsByTagName('main')[0].style.opacity = "0%";
     }
   </script>
 </html>
