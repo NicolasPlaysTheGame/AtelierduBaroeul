@@ -49,6 +49,9 @@ svg {fill: #8d5219;}
 .btn-page-ab .menu-link:hover > span {width: 100%;}
 .btn-page-sf .menu-link:hover > span {width: 100%;}
 
+.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 27px; height: 40px; line-height: 40px; border-radius: 15px; background-color: #8d5219; color: white; font-size: 24px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
+.scroll-to-top-btn.show {opacity: 1; visibility: visible;}
+
 /* Savoir-faire ----------------------------------------------- */
 
 .savoir {padding: 10px 30px 0; width: 100%; position: absolute; display: flex; flex-direction: column; text-align: center;}
@@ -118,7 +121,7 @@ svg, text {transition: all 0.5s ease;}
 .ashtray {background-color: black;}
 
 .image, .image2 {width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: center center; border: 0px solid white;}
-.image3 {width: 72vw; height: 72vw; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9);}
+.image3 {width: 75vw; height: 75vw; margin-bottom: 15px; background-repeat: no-repeat; background-size: cover; background-position: center bottom; border: 0px solid white; filter: opacity(0.9);}
 .text {display: none; position: absolute; margin: 2rem 0 3rem; padding-right: 2rem; width: 100%; bottom: 0; text-align: right; font-style: italic; color: white;}
 
 /* Carrousel -------------------------------------------*/
@@ -144,7 +147,7 @@ svg, text {transition: all 0.5s ease;}
 .title-material b {font-size: 13px; width: 40px; height: 27px; line-height: 27px; text-align: center; color: white; background-color: rgba(141, 82, 25, 0.5); border-radius: 15px; transition: opacity 1s, visibility 1s;}
 .title-material b.first {color: #8d5219; background-color: rgba(141, 82, 25, 0.08);}
 /* Indicateurs en forme de points */
-.gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 13px; color: transparent;}
+.gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 12px; color: transparent;}
 .gallery .indicator {cursor: pointer; transition: color 0.0s;}
 .gallery input#img1:checked ~ .indicators .indicator1 {color: #8d5219; position: absolute;}
 .gallery input#img2:checked ~ .indicators .indicator2,
@@ -236,6 +239,6 @@ svg, text {transition: all 0.5s ease;}
   .savoir-container {display: none; position: absolute; top: 0;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
 
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-direction: column; flex-wrap: wrap; width: auto; justify-content: space-around; gap: 15px; padding: 15px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-wrap: wrap; width: auto; padding: 15px; font-size: 12px;}
   .nav-button {opacity: 0;}
 }
