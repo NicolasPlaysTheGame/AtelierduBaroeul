@@ -41,7 +41,7 @@ svg {fill: #8d5219;}
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
 #flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 46%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
 #flex-container .bio span {text-transform: uppercase;}
-#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px; text-align: center;}
+#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px;}
 .btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
 .btn-separator {font-size: 17px; line-height: 21px;}
 .menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit';}
@@ -49,7 +49,10 @@ svg {fill: #8d5219;}
 .btn-page-ab .menu-link:hover > span {width: 100%;}
 .btn-page-sf .menu-link:hover > span {width: 100%;}
 
-.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 27px; height: 40px; line-height: 40px; border-radius: 15px; background-color: #8d5219; color: white; font-size: 24px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
+.btn-arrow {display: block; width: 35px; height: 35px; line-height: 35px; font-size: 24px; font-weight: 200; color: white; background-color: rgba(255, 255, 255, 0.5); z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; padding-top: 0; animation: fadeOut 2s 0.5s ease-out forwards;}
+@keyframes fadeOut {0% {opacity: 0; bottom: 95px;} 100% {opacity: 1; bottom: 75px;}}
+
+.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 35px; height: 35px; line-height: 35px; border-radius: 50%; background-color: #8d5219; color: white; font-size: 24px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
 .scroll-to-top-btn.show {opacity: 1; visibility: visible;}
 
 /* Savoir-faire ----------------------------------------------- */
@@ -94,12 +97,6 @@ svg, text {transition: all 0.5s ease;}
 .img-container ul li:nth-child(1) {animation: xfade 20s 16s infinite;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
-.item3 ul {margin: 20px 0 0; padding: 0; text-align: center; list-style: none;}
-.item3 ul li {margin-top: 10px;}
-.item3 ul li:nth-child(1) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 0.5s ease-out forwards;}
-.item3 ul li:nth-child(2) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1s ease-out forwards;}
-.item3 ul li:nth-child(3) {opacity: 0; padding-top: 20px; animation: fadeIn 1s 1.5s ease-out forwards;}
-@keyframes fadeIn {0% {opacity: 0; padding-top: 20px;} 100% {opacity: 1; padding-top: 0px;}}
 
 .table {display: grid; grid-template-columns: 1.3fr 1fr; padding: 0px 5rem; column-gap: 50px;}
 .flex-content {position: relative; padding-top: 25px; grid-column: 1 / 1;}
@@ -155,9 +152,9 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img4:checked ~ .indicators .indicator4,
 .gallery input#img5:checked ~ .indicators .indicator5,
 .gallery input#img6:checked ~ .indicators .indicator6 {color: white; position: absolute;}
-.gallery .down {display: flex; width: 100vw; padding: 0 15px; justify-content: end;}
+.gallery .down {display: flex; width: 100vw; padding: 0 15px;}
 
-.gallery .dots {position: absolute; bottom: 21px; display: flex; padding: 0 15px; gap: 10px;}
+.gallery .dots {position: absolute; bottom: 21px; display: flex; right: 0; padding: 0 15px; gap: 10px;}
 .gallery .dot {cursor: pointer; width: 7px; height: 7px; border-radius: 50%; background-color: whitesmoke;}
 .gallery input#img1:checked ~ .dots .dot1,
 .gallery input#img2:checked ~ .dots .dot2,
@@ -194,7 +191,6 @@ svg, text {transition: all 0.5s ease;}
 
 @media screen and (max-width: 768px) {
   body {color: #8d5219; transition: all .5s ease;}
-  a:hover {color: black;}
 
   .head-page {padding: 15px 15px 8px; justify-content: space-between;}
   .home-page {width: 40px;}
@@ -239,6 +235,6 @@ svg, text {transition: all 0.5s ease;}
   .savoir-container {display: none; position: absolute; top: 0;}
   #toerana {position: absolute; left: 10px; bottom: 6px;}
 
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: flex; flex-wrap: wrap; width: auto; padding: 15px; font-size: 12px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; flex-wrap: wrap; width: auto; padding: 15px; font-size: 12px;}
   .nav-button {opacity: 0;}
 }
