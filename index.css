@@ -21,9 +21,10 @@ header {width: 100%;}
 .parallax {height: 100vh; perspective: 10px; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth;}
 
 .grid-container {display: flex; align-items: center; flex-direction: column; row-gap: 20px; position: absolute; top: 30%; left: 0; right: 0; /*-ms-transform: translateY(-50%) translateZ(1px); transform: translateY(-50%) translateZ(1px)*/; width: 400px; margin: 0 auto; color: white;}
-.item1 {width: 100px; margin: 0 auto;}
-.item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px;}
-.item2 div:first-child {font-size: 20px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
+.item1 {width: 110px; margin: 0 auto;}
+.item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px; gap: 5px;}
+.item2 div:first-child {font-size: 23px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
+.item2 div:nth-child(2) {font-size: 15px; letter-spacing: 0.2px;}
 .item2 div:last-child {display: none;}
 .head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08); background-color: white; z-index: 999; position: relative;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
@@ -39,7 +40,7 @@ svg {fill: #8d5219;}
 .scroll-icon-container span {height: 25px; font-size: 30px;}
 
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
-#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 46%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
+#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 42%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
 #flex-container .bio span {text-transform: uppercase;}
 #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px;}
 .btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
@@ -49,8 +50,8 @@ svg {fill: #8d5219;}
 .btn-page-ab .menu-link:hover > span {width: 100%;}
 .btn-page-sf .menu-link:hover > span {width: 100%;}
 
-.btn-arrow {display: block; width: 35px; height: 35px; line-height: 35px; font-size: 24px; font-weight: 200; color: white; background-color: rgba(255, 255, 255, 0.5); z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; padding-top: 0; animation: fadeOut 2s 0.5s ease-out forwards;}
-@keyframes fadeOut {0% {opacity: 0; bottom: 95px;} 100% {opacity: 1; bottom: 75px;}}
+.btn-arrow {display: block; width: 45px; height: 45px; line-height: 45px; font-size: 28px; font-weight: 200; color: white; background-color: rgba(255, 255, 255, 0.5); z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; animation: fadeOut 1s ease-out forwards;}
+@keyframes fadeOut {0% {opacity: 0; bottom: 135px;} 100% {opacity: 1; bottom: 115px;}}
 
 .scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 35px; height: 35px; line-height: 35px; border-radius: 50%; background-color: #8d5219; color: white; font-size: 24px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
 .scroll-to-top-btn.show {opacity: 1; visibility: visible;}
@@ -209,7 +210,7 @@ svg, text {transition: all 0.5s ease;}
 
   #flex-container .bio {width: 60%; text-align: center;}
   #flex-container .bio h2 {display: none;}
-  .btn-container {margin-top: 30px;}
+  .btn-container {margin-top: 40px;}
   #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 13px;}
 
   .table {display: block; padding: 0;}
