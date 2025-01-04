@@ -6,13 +6,17 @@
 @font-face {font-family: 'Montserrat Italic'; src: url('Montserrat-Italic-VariableFont_wght.ttf');}
 
 html {scroll-behavior: smooth;}
-body {background: white; font-family:'Outfit'; font-size: 16px; font-weight: 300; line-height: 21px; letter-spacing: -0.2px; user-select: none;}
-h2 {margin: 0; font-family: 'Outfit'; font-size: 16px; font-weight: 500; line-height: 31px; letter-spacing: 0.5px; border-bottom: 1px solid; width: max-content;}
+body {color: #cd3700; /* color: #8d5219; */ background: white; font-family:'Outfit'; font-size: 13px; font-weight: 300; line-height: 16px; user-select: none;}
+main {transition: opacity 2s ease;}
+h2 {margin: 0; font-family: 'Outfit'; font-size: 12px; font-weight: 500; line-height: 25px; letter-spacing: 0.5px; border-bottom: 1px solid; width: max-content;}
 hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a {text-decoration: none; transition: all .5s ease;}
+a:hover {color: red;}
 a:focus {text-decoration: none;}
 p {margin-block-start: 20px; margin-block-end: 20px; /*Crée un décalage entre les sections*/ background-color: transparent;}
-b {font-weight: 500; letter-spacing: 0.2px;}
+b {font-weight: 600; letter-spacing: 0.3px;}
+svg:hover {fill: red}
+
 
 /* Header ----------------------------------------------- */
 
@@ -20,19 +24,21 @@ header {width: 100%;}
 
 .parallax {height: 100vh; perspective: 10px; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth;}
 
-.grid-container {display: flex; align-items: center; flex-direction: column; row-gap: 20px; position: absolute; top: 30%; left: 0; right: 0; /*-ms-transform: translateY(-50%) translateZ(1px); transform: translateY(-50%) translateZ(1px)*/; width: 400px; margin: 0 auto; color: white;}
-.item1 {width: 110px; margin: 0 auto;}
-.item2 {display: flex; font-family: "Outfit", sans-serif; font-size: 18px; gap: 5px;}
-.item2 div:first-child {font-size: 23px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
-.item2 div:nth-child(2) {font-size: 15px; letter-spacing: 0.2px;}
+.grid-container {display: flex; align-items: center; flex-direction: column; row-gap: 30px; position: absolute; top: 30%; left: 0; right: 0; /*-ms-transform: translateY(-50%) translateZ(1px); transform: translateY(-50%) translateZ(1px)*/; width: 400px; margin: 0 auto; color: white;}
+.item1 {width: 160px; margin: 0 auto;}
+.item2 {display: flex; flex-direction: column; align-items: center; font-family: "Outfit", sans-serif; font-size: 18px; gap: 5px;}
+.item2 div:nth-child() {padding-top: 10px;}
+.item2 div:first-child {font-size: 30px; font-weight: 800; text-transform: lowercase; letter-spacing: 0.4px;}
+.item2 div:nth-child(2) {padding-top: 5px; font-size: 15px; letter-spacing: 0.2px;}
 .item2 div:last-child {display: none;}
-.head-page {width: 100%; padding: 3rem 5rem 0.6rem; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08); background-color: white; z-index: 999; position: relative;}
+.head-page {position: fixed; display: block; padding: 20px 30px 15px; z-index: 999;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
 .head-page .menu-icon {display: none;}
 .menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
-.selected {color: white; background-color: #8d5219; padding: 0 4px; border-radius: 1px; /* Couleur de l'onglet sélectionné */}
-.home-page {display: block; margin: 0 auto; width: 55px;}
-svg {fill: #8d5219;}
+.selected {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit'; color: red; cursor: default; /* Couleur de l'onglet sélectionné */}
+.selected span {display: inline-block; width: 0px; border-bottom: 1px solid transparent; text-align: center; transition: width .3s ease;}
+.home-page {display: block; margin: 0 auto; width: 40px;}
+svg {fill: #cd3700;}
 
 .scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
 .scroll-icon-container:hover {height: 32px;}
@@ -40,20 +46,24 @@ svg {fill: #8d5219;}
 .scroll-icon-container span {height: 25px; font-size: 30px;}
 
 #flex-container {display: flex; position: relative; height: 100vh; flex-direction: column; background-color: white;}
-#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 42%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%;}
+#flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 50%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%; text-align: center;}
 #flex-container .bio span {text-transform: uppercase;}
-#flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; position: absolute; bottom: 0; left: 0; right: 0; font-size: 13px;}
+.contact svg {scale: 0.8;}
+.toerana {filter: brightness(0.8); scale: 0.8; transform-origin: left;}
+#flex-container .rights, #section-contact .rights, #section-propos .rights {display: none; position: absolute; bottom: 0; left: 0; right: 0; padding: 15px; font-size: 13px;}
+.w-rights {position: fixed; bottom: 0; padding: 20px 30px; font-size: 11px;}
 .btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
 .btn-separator {font-size: 17px; line-height: 21px;}
 .menu-link {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit';}
-.menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid black; text-align: center; transition: width .3s ease;}
+.menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid red; text-align: center; transition: width .3s ease;}
 .btn-page-ab .menu-link:hover > span {width: 100%;}
 .btn-page-sf .menu-link:hover > span {width: 100%;}
 
-.btn-arrow {display: block; width: 45px; height: 45px; line-height: 45px; font-size: 28px; font-weight: 200; color: white; background-color: rgba(255, 255, 255, 0.5); z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; animation: fadeOut 1s ease-out forwards;}
+.btn-arrow {display: block; width: 40px; height: 40px; line-height: 40px; font-size: 25px; font-weight: 200; color: white; background-color: rgba(255, 255, 255, 0.5); z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; animation: fadeOut 1s ease-out forwards;}
+.btn-arrow:hover {box-shadow: 0 0 3px 0;}
 @keyframes fadeOut {0% {opacity: 0; bottom: 135px;} 100% {opacity: 1; bottom: 115px;}}
 
-.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 35px; height: 35px; line-height: 35px; border-radius: 50%; background-color: #8d5219; color: white; font-size: 24px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
+.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; background-color: #cd3700; color: white; font-size: 25px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
 .scroll-to-top-btn.show {opacity: 1; visibility: visible;}
 
 /* Savoir-faire ----------------------------------------------- */
@@ -77,10 +87,12 @@ footer {position: fixed; bottom: 0; width: 100%; margin-bottom: 4rem;}
 
 svg, text {transition: all 0.5s ease;}
 .white {fill: white;}
-.sections {top: 0; z-index: 10; display: flex; padding: 0.8rem 0; font-family: 'Outfit'; letter-spacing: 0.4px;}
-.sections a {display: inline-flex; align-items: center; font-family: 'Outfit'; font-size: 16px; font-weight: 500; text-transform: uppercase; border-bottom:1px solid #fff; transition: all .3s ease;}
-.sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}
-.active, .active::after, .selected::after {content: "\00A0\2193";}
+.sections {display: block; top: 0; z-index: 10; font-family: 'Outfit'; line-height: 11px; gap: 30px; transform: translateY(28px); height: fit-content;}
+.sections a {padding-bottom: 10px; align-items: center; font-family: 'Outfit'; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: all .3s ease;}
+/*.sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}*/
+.btn .menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid red; text-align: center; transition: width .3s ease;}
+.btn .menu-link:hover > span {width: 100%;}
+/*.active, .active::after, .selected::after {content: "\00A0\2193";}*/
 .back {text-transform: uppercase;}
 #rge {display: none;}
 #mentions {text-decoration: underline;}
@@ -99,15 +111,16 @@ svg, text {transition: all 0.5s ease;}
 @keyframes xfade {17% {opacity: 1;} 25% {opacity: 0;} 92% {opacity: 0;}}
 
 
-.table {display: grid; grid-template-columns: 1.3fr 1fr; padding: 0px 5rem; column-gap: 50px;}
-.flex-content {position: relative; padding-top: 25px; grid-column: 1 / 1;}
-.flex-content:first-child {grid-column: 1 / 1; grid-row: 1 / 4;}
-.flex-content:last-child {grid-column: 2; grid-row: 1;}
+.table {display: grid; opacity: 0; grid-template-columns: 1.7fr 1.2fr 0.5fr 1fr; margin-left: 140px; padding: 20px 30px 0; column-gap: 20px; transition: opacity 2s ease;}
+.fade-out {opacity: 0;}
+.flex-content {position: relative; grid-column: 2;}
+.flex-content:first-child {grid-column: 1;}
+.flex-content:last-child {grid-column: 3;}
 .separator, #section-cv {display: none;}
 .flex-content.image {display: none; width: 100%; transform: translateY(0vh) translateZ(-1px) scale(1.1); text-align: center;}
 .contact-container {display: none; position: absolute; left: 0; right: 0; margin: 0 auto; z-index: 30; transform: translateY(-80vh); text-align: center;}
 .contact-content {margin: 0 auto; padding: 4rem; width: 25rem; color: white;}
-.contact {position: sticky; top: 0px;}
+.contact {position: sticky; top: 20px; height: fit-content;}
 #cv-container {display: flex; flex-direction: row; align-items: baseline;}
 #cv-content {display: none; padding-top: 30px; /*Crée un problème sur la transition*/ height: 0px; overflow: hidden; transition: all .2s ease;}
 .btn-page-home {width: 80px;}
@@ -143,11 +156,11 @@ svg, text {transition: all 0.5s ease;}
 .gallery .slide .overlay {position: absolute; color: white; top: 0; left: 0; padding: 15px;}
 .title-material {display: flex; align-items: baseline; justify-content: space-between;}
 .title-material b {font-size: 13px; width: 40px; height: 27px; line-height: 27px; text-align: center; color: white; background-color: rgba(141, 82, 25, 0.5); border-radius: 15px; transition: opacity 1s, visibility 1s;}
-.title-material b.first {color: #8d5219; background-color: rgba(141, 82, 25, 0.08);}
+.title-material b.first {color: #cd3700; background-color: rgba(141, 82, 25, 0.08);}
 /* Indicateurs en forme de points */
 .gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 12px; color: transparent;}
 .gallery .indicator {cursor: pointer; transition: color 0.0s;}
-.gallery input#img1:checked ~ .indicators .indicator1 {color: #8d5219; position: absolute;}
+.gallery input#img1:checked ~ .indicators .indicator1 {color: #cd3700; position: absolute;}
 .gallery input#img2:checked ~ .indicators .indicator2,
 .gallery input#img3:checked ~ .indicators .indicator3,
 .gallery input#img4:checked ~ .indicators .indicator4,
@@ -162,7 +175,7 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img3:checked ~ .dots .dot3,
 .gallery input#img4:checked ~ .dots .dot4,
 .gallery input#img5:checked ~ .dots .dot5,
-.gallery input#img6:checked ~ .dots .dot6 {background-color: #8d5219;}
+.gallery input#img6:checked ~ .dots .dot6 {background-color: #cd3700;}
 .gallery input#img2:checked ~ .dots .dot:not(.dot2),
 .gallery input#img3:checked ~ .dots .dot:not(.dot3),
 .gallery input#img4:checked ~ .dots .dot:not(.dot4),
@@ -170,19 +183,7 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img6:checked ~ .dots .dot:not(.dot6) {background-color: rgba(255, 255, 255, 0.5);}
 
 /* Boutons de navigation */
-.nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-  height: 100%;
-  color: #8d5219;
-  cursor: pointer;
-  font-size: 20px;
-  text-align: center;
-  z-index: 10;
-  opacity: 1;
-}
+.nav-button { position: absolute; top: 50%; transform: translateY(-50%); width: 50%; height: 100%; color: #cd3700; cursor: pointer; font-size: 20px; text-align: center; z-index: 10; opacity: 1;}
 .nav-prev {left: 0px;}
 .nav-next {right: 0px;}
 .hidden {opacity: 0; visibility: hidden;}
@@ -191,15 +192,19 @@ svg, text {transition: all 0.5s ease;}
 /* Mobile ----------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  body {color: #8d5219; transition: all .5s ease;}
+  body {font-size: 16px; line-height: 21px; transition: all .5s ease;}
+  h2 {font-size: 16px; line-height: 31px;}
 
-  .head-page {padding: 15px 15px 8px; justify-content: space-between;}
-  .home-page {width: 40px;}
+  .head-page {position: relative; display: block; padding: 15px 15px 8px; justify-content: space-between; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08);}
   .head-page .menu-icon {display: block; font-size: 27px;}
   .menu {flex-direction: column; justify-content: space-between; align-items: end; row-gap: 5px; overflow: hidden; margin-bottom: 5px; font-family: 'Outfit'; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
-    
-  .grid-container {width: 100%;}
-  .item2 {align-items: center; flex-direction: column; font-size: 17px;}
+  .selected {color: white; background-color: #cd3700; padding: 0 4px; border-radius: 2px;}  
+
+  .grid-container {width: 100%; row-gap: 20px;}
+  .item1 {width: 110px;}
+  .item2 {font-size: 17px;}
+  .item2 div:first-child {font-size: 23px;}
+  .item2 div:nth-child(2) {padding-top: 0; font-size: 16px; letter-spacing: 0.2px;}
   .item2 div:last-child::before {content: none;}
 
   .image {background-attachment: scroll;}
@@ -208,13 +213,15 @@ svg, text {transition: all 0.5s ease;}
   .sections {display: none;}  
   .sections >:not(:last-child) {display: none;}
 
-  #flex-container .bio {width: 60%; text-align: center;}
+  #flex-container .bio {width: 60%; top: 42%;}
   #flex-container .bio h2 {display: none;}
   .btn-container {margin-top: 40px;}
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {font-size: 13px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; font-size: 13px;}
+  .w-rights {display: none;}
 
-  .table {display: block; padding: 0;}
+  .table {display: block; width: 90%; margin-left: 0; padding: 0;}
   .flex-content {padding: 20px 15px 0;}
+  .flex-content:last-child {height: 100vh;}
   .table2 {display: none; padding: 0;}
   .flex-content2 {width: 100vw;}
   .tech {display: flex; flex-wrap: wrap; justify-content: space-evenly;}
@@ -224,18 +231,17 @@ svg, text {transition: all 0.5s ease;}
   .text {display: none;}
   .contact-content {width: 17rem; padding: 4rem 2rem;}
   .contact-container .btn-container {margin-top: 0px;}
-  .contact {height: 100vh;}
-  /*.contact::before {content: "Atelier Barœul"; text-transform: uppercase; font-weight: 500;}*/
+  .contact svg {scale: none;}
+  .toerana {scale: 0.9;}
 
   #scroll {display: none;}
   .scroll-icon-container {display: none;}
 
   .menu-link span {display: none;}
-  .menu-link {padding-block-end: 10px; border-bottom: 1px solid #8d5219;}
+  .menu-link {padding-block-end: 10px; border-bottom: 1px solid #cd3700;}
 
   .savoir-container {display: none; position: absolute; top: 0;}
-  #toerana {position: absolute; left: 10px; bottom: 6px;}
 
-  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; flex-wrap: wrap; width: auto; padding: 15px; font-size: 12px;}
+  #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; flex-wrap: wrap; width: auto; font-size: 12px;}
   .nav-button {opacity: 0;}
 }
