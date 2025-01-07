@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   
-  <body class="parallax" onscroll="changeColor()" style="opacity: 0;">
+  <body onscroll="changeColor()">
     <div class="head-page">
       <div>
         <div>
@@ -116,19 +116,16 @@
         <div class="menu-icon" id="menuIcon">☰</div>
       </div>
       <div class="sections">
-        <div class="sections-menu">
-          <a href="index.html">Accueil</a>
-          <span>|</span>
-          <a href="apropos.html">Atelier</a>
-          <span>|</span>
-          <a href="#section-savoirfaire" class="active">Savoir-faire</a>
-        </div>
+        <div class="btn"><a class="menu-link" href="index.html">Accueil<br><span></span></a></div>
+        <div class="btn"><a href="#section-savoirfaire" class="selected">Savoir-faire</a></div>
+        <div class="btn"><a class="menu-link" href="apropos.html">Atelier<br><span></span></a></div>
       </div>
       <ul class="menu" id="menu">
-        <li class="tab"><a href="index.html">Accueil</a></li>
-        <li class="tab selected"><a href="#">Savoir-faire</a></li>
-        <li class="tab"><a href="apropos.html">Atelier</a></li>
-        <li class="tab"><a href="apropos.html#section-contact">Contact</a></li>
+        <li class="tab-left"><a href="#" id="mentions">Mentions légales</a> | Atelier Barœul 2025</li>
+        <li class="tab-right"><a href="index.html">Accueil</a></li>
+        <li class="tab-right selected"><a href="#">Savoir-faire</a></li>
+        <li class="tab-right"><a href="apropos.html">Atelier</a></li>
+        <li class="tab-right"><a href="apropos.html#section-contact">Contact</a></li>
       </ul>
     </div>
     <div class="gallery">
@@ -147,7 +144,7 @@
           <label for="img6" class="nav-button nav-prev">&#10094;</label> <!-- Image précédente -->
           <label for="img2">
             <img src="https://live.staticflickr.com/65535/53344195381_f371e5117b_h.jpg" style="filter: opacity(0.0);" alt="Image 1">
-            <div class="overlay" style="color: #8d5219;">
+            <div class="overlay" style="color: #A33A1B;">
               <div class="title-material"><h2>SAVOIR-FAIRE</h2><b class="first">1/6</b></div>
               <p>L'Atelier participe aux projets de différentes manières pour répondre aux demandes en matière de rénovation et construction écologique.</p>
               <p>Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
@@ -224,35 +221,10 @@
         <label for="img5" class="dot dot5"></label>
         <label for="img6" class="dot dot6"></label>
       </div>
-      <div class="indicators">
-        <label for="img1" class="indicator indicator1"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-        <label for="img2" class="indicator indicator2"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-        <label for="img3" class="indicator indicator3"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-        <label for="img4" class="indicator indicator4"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-        <label for="img5" class="indicator indicator5"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-        <label for="img6" class="indicator indicator6"><div class="down"><span id="mentions">Mentions légales</span>&nbsp;| Atelier Barœul 2024</div></label>
-      </div>
     </div>
   </body>
+
   <script>
-    function changeColor() {
-      var scroll = document.documentElement;
-      if (scroll.scrollTop < document.getElementById("section-equipe").offsetTop) {
-        document.getElementsByClassName("sections-menu")[0].children[0].style.borderBottom = "1px solid #000";
-      } else {
-        document.getElementsByClassName("sections-menu")[0].children[0].style.borderBottom = "1px solid #fff";
-      }
-      if (scroll.scrollTop >= document.getElementById("section-equipe").offsetTop && scroll.scrollTop < document.getElementById("section-contact").offsetTop) {
-        document.getElementsByClassName("sections-menu")[0].children[1].style.borderBottom = "1px solid #000";
-      } else {
-        document.getElementsByClassName("sections-menu")[0].children[1].style.borderBottom = "1px solid #fff";
-      }
-      if (scroll.scrollTop >= document.getElementById("section-contact").offsetTop) {
-        document.getElementsByClassName("sections-menu")[0].children[2].style.borderBottom = "1px solid #000";
-      } else {
-        document.getElementsByClassName("sections-menu")[0].children[2].style.borderBottom = "1px solid #fff";
-      }
-    }
 
     window.addEventListener('load', function(event) {
       document.getElementsByTagName('body')[0].style.opacity = "100%";
@@ -269,12 +241,12 @@
 
     menuIcon.addEventListener('click', () => {
       if (menu.style.display === 'none' || menu.style.display === '') {
-        menu.style.display = 'flex';
+        menu.style.display = 'grid';
         menuIcon.textContent = '✕';
         menuIcon.style.fontWeight = '600';
         // On attend que le display soit pris en compte avant de changer la hauteur
         setTimeout(() => {
-          menu.style.height = '95px';
+          menu.style.height = '99px';
         }, 10);
       } else {
         menu.style.height = '0px';
@@ -296,11 +268,11 @@
       if (!menu) return;
 
       // Suivi du scroll sur le body
-      body.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function() {
         // Vérifier la position du scroll sur le body
-        if (body.scrollTop > 10) {
+        if (window.scrollY > 10) {
           // Vérifier si le menu est en display: flex
-          if (menu.style.display === 'flex' || window.getComputedStyle(menu).display === 'flex') {
+          if (menu.style.display === 'grid' || window.getComputedStyle(menu).display === 'grid') {
             menu.style.height = '0px';
             menuIcon.textContent = '☰';
             menuIcon.style.fontWeight = '300';
@@ -316,31 +288,6 @@
     // Appel de la fonction pour activer la logique
     toggleMenuOnScroll();
 
-    var cvContainer = document.getElementById('cv-container');
-    var cvIcon = document.getElementById('cvIcon');
-    var cvContent = document.getElementById('cv-content');
-
-    cvContainer.addEventListener('click', () => {
-      if (cvContent.style.display === 'none' || cvContent.style.display === '') {
-        cvContent.style.display = 'block';
-        cvIcon.textContent = '✕';
-        cvIcon.style.fontWeight = '600';
-        // On attend que le display soit pris en compte avant de changer la hauteur
-        setTimeout(() => {
-          cvContent.style.height = 'auto';
-        }, 10);
-      } else {
-        cvContent.style.height = '0px';
-        cvIcon.textContent = '↓';
-        cvIcon.style.fontWeight = '300';
-        // On attend que la hauteur atteigne 0 avant de cacher le cvContent
-        setTimeout(() => {
-          cvContent.style.display = 'none';
-        }, 300);
-      }
-    });
-  </script>
-  <script>
     // Ajouter un événement pour détecter le changement d'image
     const titleNumbers = document.querySelectorAll('.title-material b');
     const radios = document.querySelectorAll('input[type="radio"]');
