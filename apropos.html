@@ -117,14 +117,15 @@
       </div>
       <div class="sections">
         <div class="btn"><a class="menu-link" href="index.html">Accueil<br><span></span></a></div>
-        <div class="btn"><a class="menu-link" href="Untitled-4.html">Savoir-faire<br><span></span></a></div>
+        <div class="btn"><a class="menu-link" href="savoirfaire.html">Savoir-faire<br><span></span></a></div>
         <div class="btn"><a class="selected">Atelier<br><span></span></a></div>
       </div>
       <ul class="menu" id="menu">
-        <li class="tab"><a href="index.html">Accueil</a></li>
-        <li class="tab"><a href="Untitled-4.html">Savoir-faire</a></li>
-        <li class="tab selected"><a>Atelier</a></li>
-        <li class="tab selected"><a href="#section-contact">Contact</a></li>
+        <li class="tab-left"><a href="#" id="mentions">Mentions légales</a> | Atelier Barœul 2025</li>
+        <li class="tab-right"><a href="index.html">Accueil</a></li>
+        <li class="tab-right"><a href="savoirfaire.html">Savoir-faire</a></li>
+        <li class="tab-right selected"><a>Atelier</a></li>
+        <li class="tab-right"><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="table move">
@@ -139,7 +140,7 @@
       </div>
       <div class="separator"></div>
       <div class="flex-content">
-        <div id="section-equipe">
+        <div>
           <h2>QUI SOMMES-NOUS ?</h2>
           <p><i>Romain @Barœul</i>, artisan</p>
           <p>vit et travaille en Hauts-de-France</p>
@@ -244,7 +245,7 @@
 
     menuIcon.addEventListener('click', () => {
       if (menu.style.display === 'none' || menu.style.display === '') {
-        menu.style.display = 'flex';
+        menu.style.display = 'grid';
         menuIcon.textContent = '✕';
         menuIcon.style.fontWeight = '600';
         // On attend que le display soit pris en compte avant de changer la hauteur
@@ -271,11 +272,11 @@
       if (!menu) return;
 
       // Suivi du scroll sur le body
-      body.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function() {
         // Vérifier la position du scroll sur le body
-        if (body.scrollTop > 10) {
+        if (window.scrollY > 10) {
           // Vérifier si le menu est en display: flex
-          if (menu.style.display === 'flex' || window.getComputedStyle(menu).display === 'flex') {
+          if (menu.style.display === 'grid' || window.getComputedStyle(menu).display === 'grid') {
             menu.style.height = '0px';
             menuIcon.textContent = '☰';
             menuIcon.style.fontWeight = '300';
