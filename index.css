@@ -6,17 +6,28 @@
 @font-face {font-family: 'Montserrat Italic'; src: url('Montserrat-Italic-VariableFont_wght.ttf');}
 
 html {scroll-behavior: smooth;}
-body {color: #cd3700; /* color: #8d5219; */ background: white; font-family:'Outfit'; font-size: 13px; font-weight: 300; line-height: 16px; user-select: none;}
+body {color: #A33A1B; /* color: #8d5219; */ background: white; font-family:'Outfit'; font-size: 13px; font-weight: 300; line-height: 16px; user-select: none;}
 main {transition: opacity 2s ease;}
-h2 {margin: 0; font-family: 'Outfit'; font-size: 12px; font-weight: 500; line-height: 25px; letter-spacing: 0.5px; border-bottom: 1px solid; width: max-content;}
+h2 {margin: 0; font-family: 'Outfit'; font-size: 12px; font-weight: 500; line-height: 25px; letter-spacing: 0.5px; border-bottom: 2px solid; width: max-content;}
 hr {background-color: white; height: 1px; width: 14rem; margin: 0 0 2rem; border: none;}
 a {text-decoration: none; transition: all .5s ease;}
-a:hover {color: red;}
 a:focus {text-decoration: none;}
 p {margin-block-start: 20px; margin-block-end: 20px; /*Crée un décalage entre les sections*/ background-color: transparent;}
-b {font-weight: 600; letter-spacing: 0.3px;}
+b {font-weight: 500; letter-spacing: 0.4px;}
 svg:hover {fill: red}
 
+/* Index2 ----------------------------------------------- */
+
+.btn-scroll {display: block; width: 55px; height: 55px; line-height: 55px; font-size: 17px; font-weight: 200; color: white; z-index: 999; position: absolute; margin: 0 auto; left: 0; right: 0; text-align: center; border-radius: 50%; opacity: 0; border: 1px solid; animation: fadeOut 1s ease-out forwards;}
+.btn-scroll:hover {box-shadow: 0 0 3px 0;}
+.btn-scroll:focus {color: blue;}
+@keyframes fadeOut {0% {opacity: 0; bottom: 135px;} 100% {opacity: 1; bottom: 115px;}}
+
+/* Contact ----------------------------------------------- */
+
+.page-contact {position: relative; margin-top: 10px; padding: 15px; animation: fadeenter 1s ease-in-out;}
+.page-rights {font-size: 12px;}
+@keyframes fadeenter {0% {opacity: 0;} 100% {opacity: 1;}}
 
 /* Header ----------------------------------------------- */
 
@@ -35,10 +46,12 @@ header {width: 100%;}
 .head-page > div:first-child {display: flex; justify-content: space-between; align-items: center;}
 .head-page .menu-icon {display: none;}
 .menu {display: none; margin: 0px; padding: 0; height: 0px; list-style-type: none; transition: all .2s ease;}
+.tab-left {line-height: normal; font-size: 11px; grid-column: 1 / 1; grid-row: span 4; text-transform: capitalize; font-weight: 300; letter-spacing: normal;}
+.tab-right {grid-column: 2; width: fit-content; justify-self: end;}
 .selected {display: inline-block; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; font-size: 16px; font-family: 'Outfit'; color: red; cursor: default; /* Couleur de l'onglet sélectionné */}
 .selected span {display: inline-block; width: 0px; border-bottom: 1px solid transparent; text-align: center; transition: width .3s ease;}
 .home-page {display: block; margin: 0 auto; width: 40px;}
-svg {fill: #cd3700;}
+svg {fill: #A33A1B;}
 
 .scroll-icon-container {display: block; position: absolute; bottom: 0; left: 0; right: 0; transform: translateZ(0px); margin: 0 auto; width: 50px; height: 25px; background-color: white; border-top-left-radius: 5px; border-top-right-radius: 5px; text-align: center; transition: height .3s ease;}
 .scroll-icon-container:hover {height: 32px;}
@@ -49,7 +62,7 @@ svg {fill: #cd3700;}
 #flex-container .bio {position: absolute; display: flex; flex-direction: column; align-items: center; top: 50%; left: 0; right: 0; -ms-transform: translateY(-50%); transform: translateY(-50%); margin: 0 auto; width: 40%; text-align: center;}
 #flex-container .bio span {text-transform: uppercase;}
 .contact svg {scale: 0.8;}
-.toerana {filter: brightness(0.8); scale: 0.8; transform-origin: left;}
+.toerana {filter: brightness(0.6); scale: 0.8; transform-origin: left;}
 #flex-container .rights, #section-contact .rights, #section-propos .rights {display: none; position: absolute; bottom: 0; left: 0; right: 0; padding: 15px; font-size: 13px;}
 .w-rights {position: fixed; bottom: 0; padding: 20px 30px; font-size: 11px;}
 .btn-container {display: flex; justify-content: center; column-gap: 10px; margin-top: 3rem; text-align: center;}
@@ -63,7 +76,7 @@ svg {fill: #cd3700;}
 .btn-arrow:hover {box-shadow: 0 0 3px 0;}
 @keyframes fadeOut {0% {opacity: 0; bottom: 135px;} 100% {opacity: 1; bottom: 115px;}}
 
-.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; background-color: #cd3700; color: white; font-size: 25px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
+.scroll-to-top-btn {position: fixed; bottom: 20px; right: 20px; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; background-color: #A33A1B; color: white; font-size: 25px; font-weight: 200; text-align: center; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity 1.0s ease, visibility 1.0s ease;}
 .scroll-to-top-btn.show {opacity: 1; visibility: visible;}
 
 /* Savoir-faire ----------------------------------------------- */
@@ -92,7 +105,7 @@ svg, text {transition: all 0.5s ease;}
 /*.sections span {font-size: 1.3rem; font-weight: 100; padding: 0 5px;}*/
 .btn .menu-link span {display: inline-block; width: 0px; border-bottom: 1px solid red; text-align: center; transition: width .3s ease;}
 .btn .menu-link:hover > span {width: 100%;}
-/*.active, .active::after, .selected::after {content: "\00A0\2193";}*/
+/* .selected::after {content: "\00A0\2193";} */
 .back {text-transform: uppercase;}
 #rge {display: none;}
 #mentions {text-decoration: underline;}
@@ -153,14 +166,15 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img5:checked ~ .slides .slide5,
 .gallery input#img6:checked ~ .slides .slide6 {display: block;}
 /* Overlay avec le texte */
-.gallery .slide .overlay {position: absolute; color: white; top: 0; left: 0; padding: 15px;}
+.gallery .slide .overlay {position: absolute; color: white; top: 10px; left: 0; padding: 15px;}
+.overlay p {width: 80%;}
 .title-material {display: flex; align-items: baseline; justify-content: space-between;}
-.title-material b {font-size: 13px; width: 40px; height: 27px; line-height: 27px; text-align: center; color: white; background-color: rgba(141, 82, 25, 0.5); border-radius: 15px; transition: opacity 1s, visibility 1s;}
-.title-material b.first {color: #cd3700; background-color: rgba(141, 82, 25, 0.08);}
+.title-material b {font-size: 13px; width: 40px; height: 27px; line-height: 27px; text-align: center; color: white; background-color: rgba(163, 58, 27, 0.3); border-radius: 15px; transition: opacity 1s, visibility 1s;}
+.title-material b.first {color: #A33A1B; background-color: rgba(163, 58, 27, 0.08);}
 /* Indicateurs en forme de points */
 .gallery .indicators {position: absolute; bottom: 15px; display: flex; font-size: 12px; color: transparent;}
 .gallery .indicator {cursor: pointer; transition: color 0.0s;}
-.gallery input#img1:checked ~ .indicators .indicator1 {color: #cd3700; position: absolute;}
+.gallery input#img1:checked ~ .indicators .indicator1 {color: #A33A1B; position: absolute;}
 .gallery input#img2:checked ~ .indicators .indicator2,
 .gallery input#img3:checked ~ .indicators .indicator3,
 .gallery input#img4:checked ~ .indicators .indicator4,
@@ -168,14 +182,14 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img6:checked ~ .indicators .indicator6 {color: white; position: absolute;}
 .gallery .down {display: flex; width: 100vw; padding: 0 15px;}
 
-.gallery .dots {position: absolute; bottom: 21px; display: flex; right: 0; padding: 0 15px; gap: 10px;}
+.gallery .dots {position: absolute; bottom: 21px; display: flex; padding: 0 15px; gap: 10px;}
 .gallery .dot {cursor: pointer; width: 7px; height: 7px; border-radius: 50%; background-color: whitesmoke;}
 .gallery input#img1:checked ~ .dots .dot1,
 .gallery input#img2:checked ~ .dots .dot2,
 .gallery input#img3:checked ~ .dots .dot3,
 .gallery input#img4:checked ~ .dots .dot4,
 .gallery input#img5:checked ~ .dots .dot5,
-.gallery input#img6:checked ~ .dots .dot6 {background-color: #cd3700;}
+.gallery input#img6:checked ~ .dots .dot6 {background-color: #A33A1B;}
 .gallery input#img2:checked ~ .dots .dot:not(.dot2),
 .gallery input#img3:checked ~ .dots .dot:not(.dot3),
 .gallery input#img4:checked ~ .dots .dot:not(.dot4),
@@ -183,7 +197,7 @@ svg, text {transition: all 0.5s ease;}
 .gallery input#img6:checked ~ .dots .dot:not(.dot6) {background-color: rgba(255, 255, 255, 0.5);}
 
 /* Boutons de navigation */
-.nav-button { position: absolute; top: 50%; transform: translateY(-50%); width: 50%; height: 100%; color: #cd3700; cursor: pointer; font-size: 20px; text-align: center; z-index: 10; opacity: 1;}
+.nav-button { position: absolute; top: 50%; transform: translateY(-50%); width: 50%; height: 100%; color: #A33A1B; cursor: pointer; font-size: 20px; text-align: center; z-index: 10; opacity: 1;}
 .nav-prev {left: 0px;}
 .nav-next {right: 0px;}
 .hidden {opacity: 0; visibility: hidden;}
@@ -193,12 +207,12 @@ svg, text {transition: all 0.5s ease;}
 
 @media screen and (max-width: 768px) {
   body {font-size: 16px; line-height: 21px; transition: all .5s ease;}
-  h2 {font-size: 16px; line-height: 31px;}
+  h2 {position: sticky; top: 15px; width: max-content; padding: 0 6px; font-size: 16px; line-height: 25px; color: white; background: #A33A1B; border-bottom: none; border-radius: 2px;}
 
   .head-page {position: relative; display: block; padding: 15px 15px 8px; justify-content: space-between; box-shadow: 0 .1rem 1rem .1rem rgba(141, 82, 25, .08);}
   .head-page .menu-icon {display: block; font-size: 27px;}
-  .menu {flex-direction: column; justify-content: space-between; align-items: end; row-gap: 5px; overflow: hidden; margin-bottom: 5px; font-family: 'Outfit'; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
-  .selected {color: white; background-color: #cd3700; padding: 0 4px; border-radius: 2px;}  
+  .menu {grid-template-columns: 1.5fr 1fr; grid-template-rows: 1fr 1fr 1fr 1fr; justify-content: space-between; align-items: end; row-gap: 5px; overflow: hidden; margin-bottom: 5px; font-family: 'Outfit'; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
+  .selected {color: #A33A1B; opacity: 0.3;}  
 
   .grid-container {width: 100%; row-gap: 20px;}
   .item1 {width: 110px;}
@@ -213,14 +227,15 @@ svg, text {transition: all 0.5s ease;}
   .sections {display: none;}  
   .sections >:not(:last-child) {display: none;}
 
-  #flex-container .bio {width: 60%; top: 42%;}
+  #flex-container .bio {position: relative; width: 60%; top: 30%;}
   #flex-container .bio h2 {display: none;}
   .btn-container {margin-top: 40px;}
   #flex-container .rights, #section-contact .rights, #section-propos .rights {display: block; font-size: 13px;}
+  #section-equipe {height: 98vh;}
   .w-rights {display: none;}
 
-  .table {display: block; width: 90%; margin-left: 0; padding: 0;}
-  .flex-content {padding: 20px 15px 0;}
+  .table {display: block; width: 90%; margin-top: 10px; margin-left: 0; padding: 0;}
+  .flex-content {padding: 15px 15px 0;}
   .flex-content:last-child {height: 100vh;}
   .table2 {display: none; padding: 0;}
   .flex-content2 {width: 100vw;}
@@ -229,16 +244,17 @@ svg, text {transition: all 0.5s ease;}
   .separator {display: none; border-top: 1px solid grey; margin: 30px 30px 5px; padding: 0;}
   .flex-content.image {margin-top: 70px;}
   .text {display: none;}
+  .contact {display: none;}
   .contact-content {width: 17rem; padding: 4rem 2rem;}
   .contact-container .btn-container {margin-top: 0px;}
   .contact svg {scale: none;}
-  .toerana {scale: 0.9;}
+  .toerana {display: none; scale: 0.9;}
 
   #scroll {display: none;}
   .scroll-icon-container {display: none;}
 
   .menu-link span {display: none;}
-  .menu-link {padding-block-end: 10px; border-bottom: 1px solid #cd3700;}
+  .menu-link {padding-block-end: 10px; border-bottom: 1px solid #A33A1B;}
 
   .savoir-container {display: none; position: absolute; top: 0;}
 
